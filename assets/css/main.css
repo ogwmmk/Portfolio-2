@@ -1,0 +1,64 @@
+.ff_logo{
+}
+
+
+
+
+
+
+
+header{
+    display: flex;
+    height: 100vh;
+    background: url("../../assets/img/h-1.jpg") top center / cover no-repeat;
+    /* background-color: #000; */
+    background-color: rgba(0,0,0,0.6);
+    /* opacity: 0.7; */
+}
+
+.header_visual{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+
+.heder_logoText{
+    color: #fff;
+}
+
+.header_menu{
+    display: flex;
+}
+
+.header_menuText{
+    color: #fff;
+
+}
+
+
+
+
+.header_wrapper{
+
+    margin: 0 auto;
+    color: #fff;
+
+}
+
+.header_guide{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 4% 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+}
