@@ -36,6 +36,7 @@ header{
     width: 100%;
     height: 100%;
     text-align: center;
+    position: relative;
 }
 
 
@@ -43,37 +44,34 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
+    padding: 40px;
 }
 
 
 .heder_logoText{
-
     color: #fff;
 }
 
 .header_menu{
-
     display: flex;
     align-items: center;
 }
 
 .header_menuText{
+    margin: 0 10px;
     text-decoration: none;
     color: #fff;
 
 }
 
 
-
-
-.header_wrapper{
-
-    margin: 0 auto;
-    color: #fff;
-
+.header_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 
 .header_guide{
     display: flex;
@@ -85,10 +83,30 @@ header{
     color: #fff;
 }
 
+/* main */
 
 main{
     width: 100%;
-    height: 500px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+
+}
+
+/* about */
+.about{
+    margin-top: 200px;
+}
+
+.about_logo{
+    width: 50%;
+
+}
+
+.about_img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.about_content{
+    width: 50%;
 
 }
