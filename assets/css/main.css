@@ -1,6 +1,17 @@
 .ff_logo{
 }
 
+/* h1:font-size: 1.rem; */
+/* p:font-size: 1.4rem;*/
+
+
+
+@media screen and (min-width: 1024px) { /*ウィンドウ幅が1024px以上の場合に適用_PC*/
+
+
+html {
+    font-size: 62.5%;
+}
 
 
 header{
@@ -87,13 +98,13 @@ header{
 
 main{
     width: 100%;
-    /* background-color: aquamarine; */
-
 }
 
 /* about */
 .about{
+    display: flex;
     margin-top: 200px;
+    margin-bottom: 300px;
 }
 
 .about_logo{
@@ -103,10 +114,242 @@ main{
 
 .about_img{
     width: 100%;
+    height: 540px;
     object-fit: cover;
 }
 
 .about_content{
+    /* flex-direction: row;
+    align-items: flex-end; */
+    max-width: 500px;
+    width: 40%;
+    padding-top: 180px;
+    padding-left: 100px;
+}
+
+.about_title{
+    font-size: 1.4rem;
+
+}
+.about_description{
+    margin-top: 30px;
+    font-size: 2.2rem;
+    letter-spacing : 1.5px;
+
+
+}
+.about_text{
+    margin-top: 100px;
+    font-size: 1.4rem;
+    line-height:2.5;
+
+}
+
+.about_more{
+    margin-top: 50px;
+    font-size: 1.4rem;
+}
+
+
+/*facility*/
+.facility{
+    display: flex;
+    background-color: #eee;
+    padding-bottom: 400px;
+}
+
+.facility_logo{
     width: 50%;
 
+}
+
+.facility_img{
+    width: 100%;
+    height: 540px;
+    margin-top: -100px;
+    object-fit: cover;
+}
+
+
+.facility_content{
+    max-width: 500px;
+    width: 40%;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.facility_title{
+    font-size: 1.4rem;
+
+}
+.facility_description{
+    margin-top: 30px;
+    font-size: 2.2rem;
+    letter-spacing : 1.5px;
+
+}
+.facility_text{
+    margin-top: 100px;
+    font-size: 1.4rem;
+    line-height:2.5;
+
+}
+
+.facility_more{
+    margin-top: 50px;
+    font-size: 1.4rem;
+}
+
+/* spa */
+
+.spa{
+    display: flex;
+    padding-bottom: 300px;
+}
+
+.spa_logo{
+    width: 50%;
+
+}
+
+.spa_img{
+    width: 100%;
+    height: 540px;
+    margin-top: -100px;
+    object-fit: cover;
+}
+
+
+.spa_content{
+    max-width: 500px;
+    width: 40%;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+
+.spa_title{
+    font-size: 1.4rem;
+
+}
+.spa_description{
+    margin-top: 30px;
+    font-size: 2.2rem;
+    letter-spacing : 1.5px;
+    line-height:2;
+
+
+}
+.spa_text{
+    margin-top: 80px;
+    font-size: 1.4rem;
+    line-height:2.5;
+
+}
+
+.spa_more{
+    margin-top: 50px;
+    font-size: 1.4rem;
+}
+
+
+
+
+/* meal */
+
+.meal{
+    display: flex;
+    background-color: #eee;
+    padding-bottom: 300px;
+
+}
+
+.meal_logo{
+    width: 50%;
+
+}
+
+.meal_img{
+    width: 100%;
+    height: 540px;
+    margin-top: -100px;
+    object-fit: cover;
+}
+
+
+.meal_content{
+    max-width: 500px;
+    width: 40%;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.meal_title{
+    font-size: 1.4rem;
+
+}
+.meal_description{
+    margin-top: 20px;
+    font-size: 2.2rem;
+    letter-spacing : 1.5px;
+    line-height:2;
+
+
+}
+
+.meal_text{
+    margin-top: 80px;
+    font-size: 1.4rem;
+    line-height:2.5;
+
+}
+
+.meal_more{
+    margin-top: 50px;
+    font-size: 1.4rem;
+}
+
+/* room */
+
+
+.room{
+    display: flex;
+}
+
+.room_logo{
+    width: 50%;
+
+}
+
+.room_img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.room_content{
+    /* flex-direction: row;
+    align-items: flex-end; */
+    max-width: 500px;
+    width: 50%;
+    padding: 10px 50px;
+}
+.room_title{
+    font-size: 1.4rem;
+
+}
+.room_description{
+    font-size: 2.4rem;
+
+}
+.room_text{
+    font-size: 1.4rem;
+    line-height:2.5;
+
+}
+
+.room_more{
+    font-size: 1.4rem;
+
+}
 }
