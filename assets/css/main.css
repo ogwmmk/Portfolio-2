@@ -2,7 +2,7 @@
 }
 
 /* h1:font-size: 1.rem; */
-/* p:font-size: 1.4rem;*/
+/* main_p:font-size: 1.4rem;*/
 
 
 
@@ -519,43 +519,150 @@ main{
 
 }
 
+
+/* footer */
+
 .footer{
     display: flex;
     justify-content: space-between;
-    padding: 100px 80px;
-    background-color: #888;
-    font-size: 2em;
+    padding: 160px 80px;
+    background-color: #333;
+    color: #fff;
 }
+
+
 
 .footer_top{
     writing-mode: vertical-rl;
+}
 
+.footer_subTitle{
+    font-size: 1.2rem;
+}
+
+.footer_title{
+    margin-top: 18px;
+    font-size: 2.8rem;
+
+}
+
+
+
+
+
+
+
+.footer_menu{
+    margin-bottom: 50px;
 }
 
 .footer_list{
     list-style:none;
+    margin-bottom: 10px;
 }
 
 .footer_text{
     text-decoration: none;
-
+    font-size: 1.6rem;
+    color: #fff;
 }
+
 
 
 .footer_guideList{
     list-style:none;
+    margin-bottom: 4px;
 }
 
 .footer_guideText{
     text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
 
 }
 
 
+.footer_bottom{
+    margin-right: 100px;
+
+}
+
+.footer_tel{
+    font-size: 2.4rem;
+
+}
+
+.footer_time{
+    font-size: 1.2rem;
+
+
+}
+
+.footer_address{
+    font-size: 1.2rem;
+
+
+}
+
+.footer_map{
+    font-size: 1.2rem;
+
+
+}
+
+.sns{
+    margin-top: 50px;
+}
+
+.sns_box{
+    display: flex;
+    padding-left: 0;
+}
+
+.sns_logo{
+    margin-right: 20px;
+    list-style:none;
+}
+
+.sns_img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.language{
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+.language_box{
+    padding-left: 0;
+}
+
+
+.language_list{
+    list-style:none;
+    margin-left: 0;
+    margin-bottom: 4px;
+
+}
+
+.language_text{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
 
 
 
+}
 
+.copyright_text{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+
+
+
+}
 
 
 
