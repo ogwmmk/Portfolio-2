@@ -57,29 +57,34 @@ header{
     content: ' ';
 }
 
-.headar_wrapper{
+/* .header_wrapper{
     position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
     position: relative;
-}
+} */
 
 
 .header_top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
-    margin: 0 auto;
+    padding: 30px 30px 0 30px;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
+.header_logo{
+    
+}
 
-.heder_logoText{
-    font-size: 1.6rem;
+.header_logoText{
+    font-size: 1.8rem;
     letter-spacing : 2px;
     color: #fff;
 }
@@ -89,13 +94,56 @@ header{
     align-items: center;
 }
 
-.header_menuText{
+.header_Language{
+    display: flex;
+    align-items: center;
+}
+
+.header_LanguageText{
     margin: 0 10px;
     text-decoration: none;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 
 }
+.header_LanguageTub{
+    width: 5px;
+    height: 5px;
+    border: 1px solid;
+    border-color:  transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+}
+
+
+.header_menuTel{
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+
+}
+
+.header_menuBtn{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+
+}
+/*  スクロール */
+
+.headerColorScroll {
+    color: #777;
+    transition: color 0.2s ease-out;
+}
+
+.headerColorScroll_2 {
+    color: black;
+    transition: color 0.2s ease-out;
+}
+
+/*  */
 
 
 .header_content{
@@ -103,6 +151,7 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .header_subtitle{
@@ -113,22 +162,46 @@ header{
 .header_title{
     font-size: 4rem;
     letter-spacing : 18px;
+    
 
 }
 
 .header_titleText{
     font-size: 1rem;
+    letter-spacing : 1px;
+
 
 }
 
 .header_guide{
     display: flex;
     justify-content: space-between;
-    padding: 30px 4% 10px;
+    padding: 30px 30px 20px 30px;
     position: fixed;
     bottom: 0;
     width: 100%;
     color: #fff;
+    box-sizing: border-box;
+}
+
+.header_guideBox{
+
+}
+
+.header_guideText{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+}
+
+
+.header_chatbotIcon{
+    width: 50px;
+    height: 50px;
 }
 
 /* main */
@@ -339,9 +412,9 @@ main{
     font-size: 2.2rem;
     letter-spacing : 1.5px;
     line-height:2;
-
-
+    display: inline;
 }
+
 .spa_text{
     margin-top: 80px;
     font-size: 1.4rem;
@@ -523,7 +596,24 @@ main{
 }
 
 .blog_title{
+    position:relative;
     font-size: 2.2rem;
+    font-weight: lighter;
+}
+
+
+.blog_title::after{
+    /* border: 0.4px solid #ddd; */
+    content:"";
+    display:block;
+    width: 120px;
+    height:1px;
+    background-color:#666;
+    position:absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
 
 .blog_content{
@@ -578,13 +668,17 @@ main{
     margin-top: 100px;
     width: 180px;
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     transition: all 0.3s ease 0s;
     cursor: pointer;
 }
 
-.blog_viewBox:hover{
+/* .blog_viewBox:hover{
     opacity: 0.6;
+} */
+
+.blog_viewBox:hover{
+    border-color: black;
 }
 
 .blog_view{
@@ -601,7 +695,7 @@ main{
 .reservation{
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .reservation_top{
@@ -612,17 +706,40 @@ main{
     margin-top: 50px;
 }
 
+
+
 .reservation_title{
+    position:relative;
     font-size: 2.2rem;
+    font-weight: lighter;
 }
 
 
+.reservation_title::after{
+    /* border: 0.4px solid #ddd; */
+    content:"";
+    display:block;
+    width: 120px;
+    height:1px;
+    background-color:#666;
+    position:absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.reservation_content{
+    margin-top: 80px;
+}
 .reservation_text{
     font-size: 2rem;
+    line-height: 2;
 
 }
 .reservation_subText{
-    font-size: 1rem;
+    margin-top: 0;
+    font-size: 1.2rem;
 
 }
 
@@ -632,8 +749,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    width: 180px;
+    margin: 30px auto 0;
+    width: 230px;
     height: 50px;
     border: 1px solid black;
     transition: all 0.3s ease 0s;
@@ -646,14 +763,16 @@ main{
 
 .reservation_info{
     color: black;
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 1.5rem;
+    /* font-weight: ; */
     letter-spacing: 1px;
     text-decoration: none;
 }
 
 .reservation_tel{
+    margin-bottom: 0;
     font-size: 3rem;
+    font-weight: lighter;
 
 }
 .reservation_time{
@@ -707,8 +826,14 @@ main{
     text-decoration: none;
     font-size: 1.6rem;
     letter-spacing: 1px;
-    color: #ddd;
+    color: #ccc;
 }
+
+
+.footer_text:hover{
+    color: #fff;
+}
+
 
 .footer_guide{
 }
@@ -722,10 +847,14 @@ main{
     text-decoration: none;
     font-size: 1.2rem;
     letter-spacing: 1px;
-    color: #ddd;
-
+    color: #ccc;
 }
 
+
+
+.footer_guideText:hover{
+    color: #fff;
+}
 
 .footer_bottom{
     margin-right: 100px;
@@ -742,6 +871,7 @@ main{
 .footer_time{
     font-size: 1.2rem;
     letter-spacing: 1px;
+    color: #ccc;
 
 }
 
@@ -750,15 +880,20 @@ main{
     margin-bottom: 18px;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    color: #ccc;
 }
 
 .footer_map{
     font-size: 1.2rem;
     line-height:1.5;
     letter-spacing: 1px;
-
-
+    color: #ccc;
 }
+
+.footer_map:hover{
+    color: #fff;
+}
+
 
 .sns{
     margin-top: 50px;
@@ -780,6 +915,7 @@ main{
     object-fit: cover;
 }
 
+
 .language{
     margin-top: 70px;
     margin-bottom: 50px;
@@ -800,9 +936,13 @@ main{
     text-decoration: none;
     font-size: 1.2rem;
     letter-spacing: 1px;
-    color: #ddd;
-
+    color: #ccc;
 }
+
+.language_text:hover{
+    color: #fff;
+}
+
 
 .copyright{
     margin-top: 50px;
@@ -810,7 +950,7 @@ main{
 .copyright_text{
     text-decoration: none;
     font-size: 1rem;
-    color: #ddd;
+    color: #ccc;
 
 }
 
@@ -818,7 +958,73 @@ main{
 
 
 
+/* ここからhover */
+
+/* リンクのデフォルトスタイルを無効化し、下線を追加する */
+.underline {
+    color: black;  /* 文字色 */
+    /* display: inline-block; これがないとリンク範囲が全幅になる */
+    position: relative; /* 相対位置指定 */
+    text-decoration: none; /* デフォルトのテキストの下線を消す */
+    background: linear-gradient(black, black) 0 100%/0 1px no-repeat;
+    display: inline;
+
+  }
+  /* 下線のスタイル */
+  .underline::after {
+    background-color: black; /* 下線の色 */
+    bottom: -4px; /* 要素の下端からの距離 */
+    content: ""; /* 要素に内容を追加 */
+    height: 1px; /* 下線の高さ */
+    left: 0; /* 要素の左端からの距離 */
+    position: absolute; /* 絶対位置指定 */
+    transform: scale(0, 1);  /* 下線を横方向に0倍、縦方向に1倍に変形（非表示） */
+    transform-origin: left top; /* 変形の原点を左上に指定 */
+    transition: transform .3s;  /* 変形をアニメーション化 */
+    width: 100%; /* 要素の幅 */
+    background-size: 100% 2px;
+
+  }
+  /* リンクにホバーした際の下線の表示 */
+  .underline:hover::after {
+    transform: scale(1, 1);     /* 下線を横方向に1倍、縦方向に1倍に変形（表示） */
+  }
+
+/*  */
+
+  .viewBox:hover .view {
+    /* text-decoration: underline; */
+    transition: transform .3s;  /* 変形をアニメーション化 */
+
+  }
 
 
+  .viewBox {
+    color: black;  /* 文字色 */
+    /* display: inline-block; これがないとリンク範囲が全幅になる */
+    position: relative; /* 相対位置指定 */
+    text-decoration: none; /* デフォルトのテキストの下線を消す */
+    background: linear-gradient(black, black) 0 100%/0 1px no-repeat;
+    display: inline;
+
+  }
+  /* 下線のスタイル */
+  .viewBox::after .view{
+    background-color: black; /* 下線の色 */
+    bottom: -4px; /* 要素の下端からの距離 */
+    content: ""; /* 要素に内容を追加 */
+    height: 1px; /* 下線の高さ */
+    left: 0; /* 要素の左端からの距離 */
+    position: absolute; /* 絶対位置指定 */
+    transform: scale(0, 1);  /* 下線を横方向に0倍、縦方向に1倍に変形（非表示） */
+    transform-origin: left top; /* 変形の原点を左上に指定 */
+    transition: transform .3s;  /* 変形をアニメーション化 */
+    width: 100%; /* 要素の幅 */
+    background-size: 100% 2px;
+
+  }
+
+
+/* ここまで */
 
 }
