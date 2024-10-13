@@ -11,15 +11,18 @@
 <body>
     <header>
         <div class="header_container">
-            <div class="headar_wrapper">
-                <div class="header_top">
+            <!-- <div class="headar_wrapper"> -->
+                <div class="header_top js-header">
                     <div class="header_logo">
-                        <p class="heder_logoText">奥の湯</p>
+                        <p class="header_logoText js-header">奥の湯</p>
                     </div>
                     <div class="header_menu">
-                        <p class="header_menuText">Language</p>
-                        <p class="header_menuText">Tel. 0123-45-6789</p>
-                        <a class="header_menuText" href="#">ご予約</a>
+                        <div class="header_Language">
+                            <p class="header_LanguageText js-header">Language</p>
+                            <div class="header_LanguageTub"></div>
+                        </div>
+                        <p class="header_menuTel js-header">Tel. 0123-45-6789</p>
+                        <a class="header_menuBtn js-header" href="#">ご予約</a>
                     </div>
                 </div>
                 <div class="header_content">
@@ -27,64 +30,70 @@
                     <h1 class="header_title">奥の湯</h1>
                     <p class="header_titleText">Kuroda Onsen “Oku no yu”</p>
                 </div>
-            </div>
+            <!-- </div> -->
                 <div class="header_guide">
-                <a class="header_guideText" href="#">新型コロナウイルスに関する当館の安全対策について</a>
-                <img class="header_guideIcon" src="" alt="チャットボット">
-                </div>
+                    <div class="header_guideBox js-header_2">
+                        <a class="header_guideText" href="#">新型コロナウイルスに関する当館の安全対策について</a>
+                    </div>
 
+                    <div class="header_chatbot">
+                        <img class="header_chatbotIcon" src="assets/img/cat_1.png" alt="チャットボット">
+                    </div>
+                </div>
         </div>
+
+
     </header>
+
     <main>
         <div class="about">
             <div class="about_logo">
                 <img class="about_img" src="assets/img/main_1.jpg" alt="画像">
             </div>
-            <div class="about_content">
+            <div class="about_content" href="#">
                 <p class="about_title ff">はじめに</p>
-                <h2 class="about_description ff_description">阿蘇の大自然に包まれた宿</h2>
+                <h2 class="about_description ff_description underline">阿蘇の大自然に包まれた宿</h2>
                 <p class="about_text">黒田温泉全体を流れる田の原川上流の<br>静かな場所にたたずむ寛ぎ宿です。</p>
                 <div class="about_moreBox">
-                    <p class="about_more">More</p>
+                    <p class="about_more underline">More</p>
                     <div class="about_moreLogo"></div>
                 </div>
-
             </div>
         </div>
 
         <div class="facility">
             <div class="facility_content">
                 <p class="facility_title">館内</p>
-                <h2 class="facility_description ff_description">二千坪の敷地に佇む宿</h2>
+                <h2 class="facility_description ff_description underline">二千坪の敷地に佇む宿</h2>
                 <p class="facility_text">本館・新館・離れを囲むように、<br>全9種の多彩な湯船、他にも黒田唯一の蒸し湯や、<br>岩盤浴・温泉熱プールといった施設が点在しています。
                 </p>
-                <p class="facility_more">More</p>
+                <p class="facility_more underline">More</p>
             </div>
             <div class="facility_logo">
                 <img class="facility_img" src="assets/img/main_1.jpg" alt="画像">
             </div>
         </div>
 
-        <div class="spa">
+        <div class="spa fade-in">
             <div class="spa_logo">
                 <img class="spa_img" src="assets/img/main_1.jpg" alt="画像">
             </div>
             <div class="spa_content">
                 <p class="spa_title">温泉</p>
-                <h2 class="spa_description ff_description">静かに、ゆるやかな時間が、<br>疲れを疲れを流していきます
+                <h2 class="spa_description ff_description underline">静かに、ゆるやかな時間が、<br>疲れを疲れを流していきます
                 </h2>
                 <p class="spa_text">田の原川沿いに造られた混浴露天風呂、<br>神秘的な雰囲気な洞窟風呂など<br>風情ある多彩なお風呂がございます。</p>
-                <p class="spa_more">More</p>
+                <p class="spa_more underline">More</p>
             </div>
         </div>
 
         <div class="meal">
             <div class="meal_content">
                 <p class="meal_title">お食事</p>
-                <h2 class="meal_description ff_description">地元の朝市で仕入れた<br>地元食材を使用した<br>田舎風会席会席料理</h2>
+                <h2 class="meal_description ff_description underline">地元の朝市で仕入れた<br>地元食材を使用した<br>田舎風会席会席料理</h2>
                 <p class="meal_text">四季ごと、日ごとに変化する味わいを、<br>どうぞご堪能ください。
                 </p>
-                <p class="meal_more">More</p>
+                <p class="meal_more underline">More</p>
             </div>
             <div class="meal_logo">
                 <img class="meal_img" src="assets/img/main_1.jpg" alt="画像">
@@ -98,10 +107,10 @@
             </div>
             <div class="room_content">
                 <p class="room_title">客室</p>
-                <h2 class="room_description ff_description">耳を澄ますと聞こえてくる<br>川のせせらぎ。<br>自然に包まれた庭園を望む。
+                <h2 class="room_description ff_description underline">耳を澄ますと聞こえてくる<br>川のせせらぎ。<br>自然に包まれた庭園を望む。
                 </h2>
                 <p class="room_text">本館・新館・離れ、<br>趣の異なる全二十六室</p>
-                <p class="room_more">More</p>
+                <p class="room_more underline">More</p>
             </div>
         </div>
 
@@ -165,8 +174,8 @@
             <p class="reservation_tel">Tel. 1234-56-7890</p>
             <p class="reservation_time">受付時間 9:00 〜 19:00</p>
         </div>
-
-
+    </main>
+    <footer>
         <div class="footer">
             <div class="footer_top">
                 <p class="footer_subTitle">黒田温泉</p>
@@ -225,22 +234,22 @@
                     <ul class="sns_box">
                         <li class="sns_logo">
                             <a class="sns_link" href="#">
-                                <img class="sns_img" src="assets/img/instagram_white.png" alt="Facebook">
+                                <img class="sns_img" src="assets/img/facebook_1.png" alt="Facebook">
                             </a>
                         </li>
                         <li class="sns_logo">
                             <a class="sns_link" href="#">
-                                <img class="sns_img" src="assets/img/instagram_white.png" alt="Twitter">
+                                <img class="sns_img" src="assets/img/Twitter_1.png" alt="Twitter">
                             </a>
                         </li>
                         <li class="sns_logo">
                             <a class="sns_link" href="#">
-                                <img class="sns_img" src="assets/img/instagram_white.png" alt="Instagram">
+                                <img class="sns_img" src="assets/img/instagram_1.png" alt="Instagram">
                             </a>
                         </li>
                         <li class="sns_logo">
                             <a class="sns_link" href="#">
-                                <img class="sns_img" src="assets/img/instagram_white.png" alt="YouTube">
+                                <img class="sns_img" src="assets/img/youtube_1.png" alt="YouTube">
                             </a>
                         </li>
                     </ul>
@@ -271,9 +280,12 @@
         </div>
 
 
-    </main>
-    <footer>
+
+    
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
 
 </body>
 </html>
