@@ -11,12 +11,22 @@
 } */
 
 
+
+
 /* description */
 .ff_description{
     font-size: 2.2rem;
     font-weight: lighter;
     letter-spacing : 1.5px;
 }
+
+
+.ff_logo {
+    font-family: "Yuji Syuku", serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
 
 @media screen and (min-width: 1024px) { /*ウィンドウ幅が1024px以上の場合に適用_PC*/
 
@@ -32,6 +42,7 @@ html {
 header{
     height:100vh;
     margin: 0;
+
 }
 
 
@@ -45,6 +56,37 @@ header{
 
 }
 
+/* スライド */
+
+.header_container{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/img/h-1.jpg");
+    background-size: 110%;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    animation: slide 5s linear infinite; /* スライドアニメーション */
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0) scale(1.1);
+    }
+    50% {
+        transform: translateX(-10px) scale(1.1); /* 右に10px動く */
+    }
+    100% {
+        transform: translateX(-20px) scale(1.1);
+    }
+}
+
+
+
 .header_container::before{
     /* 透過した黒を上から重ねるイメージ */
     background-color: rgba(0,0,0,0.4);
@@ -57,14 +99,8 @@ header{
     content: ' ';
 }
 
-/* .header_wrapper{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    position: relative;
-} */
 
+/*  */
 
 .header_top{
     display: flex;
@@ -80,7 +116,7 @@ header{
 }
 
 .header_logo{
-    
+
 }
 
 .header_logoText{
@@ -131,19 +167,7 @@ header{
     padding: 10px 15px;
 
 }
-/*  スクロール */
 
-.headerColorScroll {
-    color: #777;
-    transition: color 0.2s ease-out;
-}
-
-.headerColorScroll_2 {
-    color: black;
-    transition: color 0.2s ease-out;
-}
-
-/*  */
 
 
 .header_content{
@@ -157,19 +181,20 @@ header{
 .header_subtitle{
     font-size: 1.2rem;
     letter-spacing : 1px;
+    color: #fff;
+
 }
 
 .header_title{
     font-size: 4rem;
     letter-spacing : 18px;
-    
-
+    color: #fff;
 }
 
 .header_titleText{
     font-size: 1rem;
     letter-spacing : 1px;
-
+    color: #fff;
 
 }
 
@@ -210,7 +235,7 @@ main{
     width: 100%;
 }
 
-/* about */
+/* about はじめに*/
 .about{
     display: flex;
     margin-top: 200px;
@@ -285,15 +310,15 @@ main{
     border-bottom: 1px solid #666;
     border-right: 1px solid #666;
     transform: skew(45deg);
-
 }
 
 
 /*facility*/
 .facility{
     display: flex;
-    background-color: #eee;
     padding-bottom: 380px;
+    background-image: url("../../assets/img/background-gry.jpg");
+
 }
 
 
@@ -354,10 +379,31 @@ main{
 
 }
 
-.facility_more{
+
+.facility_moreBox{
+    display: flex;
+    align-items: center;
     margin-top: 50px;
+
+}
+
+.facility_more{
     font-size: 1.4rem;
 }
+
+.facility_moreLogo{
+    margin-left: 20px;
+    width: 50px;
+    height: 5px;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: skew(45deg);
+}
+
+
+
+
+
 
 /* spa */
 
@@ -424,9 +470,24 @@ main{
 
 }
 
-.spa_more{
+.spa_moreBox{
+    display: flex;
+    align-items: center;
     margin-top: 50px;
+
+}
+
+.spa_more{
     font-size: 1.4rem;
+}
+
+.spa_moreLogo{
+    margin-left: 20px;
+    width: 50px;
+    height: 5px;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: skew(45deg);
 }
 
 
@@ -436,8 +497,9 @@ main{
 
 .meal{
     display: flex;
-    background-color: #eee;
     padding-bottom: 300px;
+    background-image: url("../../assets/img/background-gry.jpg");
+
 
 }
 
@@ -462,7 +524,7 @@ main{
 .meal_content{
     max-width: 500px;
     width: 40%;
-    padding-top: 100px;
+    padding-top: 180px;
     padding-left: 140px;
 }
 
@@ -501,10 +563,26 @@ main{
 
 }
 
-.meal_more{
+.meal_moreBox{
+    display: flex;
+    align-items: center;
     margin-top: 50px;
+
+}
+
+.meal_more{
     font-size: 1.4rem;
 }
+
+.meal_moreLogo{
+    margin-left: 20px;
+    width: 50px;
+    height: 5px;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: skew(45deg);
+}
+
 
 /* room */
 
@@ -579,9 +657,24 @@ main{
 
 }
 
-.room_more{
+.room_moreBox{
+    display: flex;
+    align-items: center;
     margin-top: 50px;
+
+}
+
+.room_more{
     font-size: 1.4rem;
+}
+
+.room_moreLogo{
+    margin-left: 20px;
+    width: 50px;
+    height: 5px;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: skew(45deg);
 }
 
 /* blog ブログ*/
@@ -787,8 +880,9 @@ main{
     display: flex;
     justify-content: space-between;
     padding: 180px 80px;
-    background-color: #333;
     color: #ddd;
+    background-image: url("../../assets/img/background-bk.jpg");
+
 }
 
 
@@ -909,11 +1003,37 @@ main{
     list-style:none;
 }
 
-.sns_img{
-    width: 20px;
-    height: 20px;
+/* ホバー */
+.sns_link {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin: 0 auto;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
     object-fit: cover;
+
 }
+.sns_link img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	display: block;
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.sns_link:hover img:nth-of-type(2) {
+	opacity: 0;
+}
+/*  ここまで*/
+
+
+
 
 
 .language{
@@ -958,7 +1078,36 @@ main{
 
 
 
+
+
 /* ここからhover */
+
+
+/*  スクロール ヘッダーカラー変更 */
+
+.headerColorScroll {
+    color: #777;
+    border-color: #777;
+    transition: color 0.2s ease-out;
+}
+
+.headerColorScroll-tub {
+    color: #777;
+    border-color:  transparent transparent #777 #777;
+    transition: color 0.2s ease-out;
+}
+
+.headerColorScroll-guide {
+    color: #000;
+    border-color: #000;
+    transition: color 0.2s ease-out;
+}
+
+/*  */
+
+
+
+/* hover */
 
 /* リンクのデフォルトスタイルを無効化し、下線を追加する */
 .underline {
@@ -1026,5 +1175,6 @@ main{
 
 
 /* ここまで */
+
 
 }
