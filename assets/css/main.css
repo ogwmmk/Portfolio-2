@@ -41,26 +41,16 @@ header{
 }
 
 
-    /* .header_container{
-        background: url("../../assets/img/h-1.jpg")no-repeat center;
-        background-size: cover;
-        position: relative;
-        width: 100%;
-        height:100%;
-        color:#fff;
-
-    } */
-
 /* スライド */
 
 .header_container {
     position: absolute;
     top: 0;
     left: 0;
-    width: 95%;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     background-image: url("../../assets/img/h-1.jpg");
-    background-size: 110%;
+    background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out;
     animation: slide 5s linear infinite;
@@ -69,16 +59,16 @@ header{
 
 @keyframes slide {
     0% {
-        transform: translateX(0) scale(1.1);
+        transform: translateX(0);
     }
 
     50% {
-        transform: translateX(-10px) scale(1.1);
+        transform: translateX(-10px);
         /* 右に10px動く */
     }
 
     100% {
-        transform: translateX(-20px) scale(1.1);
+        transform: translateX(-20px);
     }
 }
 
@@ -190,6 +180,70 @@ header{
     color: #fff;
 
 }
+
+.header_bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 100;
+    color: #bbb;
+    /* mix-blend-mode: exclusion; */
+    width: 1.5px;
+    height: 100px;
+    margin: auto;
+    writing-mode: vertical-rl;
+
+}
+
+.header_bottom::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background-color: #bbb;
+    animation: scroll 1.5s infinite;
+
+}
+
+.header_bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.5px;
+    background-color: #fff;
+    animation-name: lineAnima;/*アニメーションの名前*/
+    animation-duration: 4s;/*アニメーションの時間の長さ：4秒*/
+    animation-timing-function: ease;/*アニメーションの変化のしかた：開始・終了ともに緩やか*/
+    animation-iteration-count: infinite;/*アニメーションの繰り返し回数：無限*/
+
+}
+
+@keyframes lineAnima {
+    0% {
+        bottom: 100px;
+        height: 0;
+    }
+
+    40% {
+        bottom: 0;
+        height: 100px;
+    }
+
+    80% {
+        bottom: 0;
+        height: 0;
+    }
+
+    100% {
+        bottom: 0;
+        height: 0;
+    }
+}
+
 
 .header_guide {
     display: flex;
@@ -1252,16 +1306,16 @@ header{
 
 @keyframes slide {
     0% {
-        transform: translateX(0) scale(1.1);
+        transform: translateX(0);
     }
 
     50% {
-        transform: translateX(-10px) scale(1.1);
+        transform: translateX(-10px);
         /* 右に10px動く */
     }
 
     100% {
-        transform: translateX(-20px) scale(1.1);
+        transform: translateX(-20px);
     }
 }
 
@@ -1308,6 +1362,7 @@ header{
 .header_Language {
     display: flex;
     align-items: center;
+    margin-right: 20px;
 }
 
 .header_LanguageText {
@@ -1328,10 +1383,11 @@ header{
 
 
 .header_menuTel {
-    margin: 0 20px;
+    /* margin: 0 20px;
     text-decoration: none;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.3rem; */
+    display: none;
 
 }
 
@@ -1373,6 +1429,70 @@ header{
     color: #fff;
 
 }
+
+.header_bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 100;
+    color: #bbb;
+    /* mix-blend-mode: exclusion; */
+    width: 1.5px;
+    height: 100px;
+    margin: auto;
+    writing-mode: vertical-rl;
+
+}
+
+.header_bottom::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background-color: #bbb;
+    animation: scroll 1.5s infinite;
+
+}
+
+.header_bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.5px;
+    background-color: #fff;
+    animation-name: lineAnima;/*アニメーションの名前*/
+    animation-duration: 4s;/*アニメーションの時間の長さ：4秒*/
+    animation-timing-function: ease;/*アニメーションの変化のしかた：開始・終了ともに緩やか*/
+    animation-iteration-count: infinite;/*アニメーションの繰り返し回数：無限*/
+
+}
+
+@keyframes lineAnima {
+    0% {
+        bottom: 100px;
+        height: 0;
+    }
+
+    40% {
+        bottom: 0;
+        height: 100px;
+    }
+
+    80% {
+        bottom: 0;
+        height: 0;
+    }
+
+    100% {
+        bottom: 0;
+        height: 0;
+    }
+}
+
 
 .header_guide {
     display: flex;
@@ -1927,7 +2047,7 @@ main {
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 30px;
     width: 180px;
     height: 50px;
     border: 1px solid #ccc;
@@ -2414,49 +2534,34 @@ header{
     width: 100%;
     height:100vh;
     margin: 0;
-
 }
-
-
-/* .header_container{
-    background: url("../../assets/img/h-1.jpg")no-repeat center;
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    height:100%;
-    color:#fff;
-
-} */
 
 /* スライド */
 
 .header_container{
-
     position: absolute;
     top: 0;
     left: 0;
-    width: 95%;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     background-image: url("../../assets/img/h-1.jpg");
-    background-size: 110%;
+    background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out;
-    animation: slide 5s linear infinite; /* スライドアニメーション */
-
+    animation: slide 5s linear infinite;
 }
 
 @keyframes slide {
     0% {
-        transform: translateX(0) scale(1.1);
+        transform: translateX(0);
     }
     50% {
-        transform: translateX(-10px) scale(1.1); /* 右に10px動く */
+        transform: translateX(-10px);
     }
     100% {
-        transform: translateX(-20px) scale(1.1);
+        transform: translateX(-20px);
     }
 }
-
 
 
 .header_container::before{
@@ -2487,11 +2592,50 @@ header{
     box-sizing: border-box;
 }
 
+.header_nav{
+    display: flex;
+    /* align-items: center; */
+    /* padding: 1rem; */
+    /* position: fixed; */
+    /* width: 100%; */
+    /* top: 0; */
+    transition: background-color 0.3s;
+}
+
 .header_logo{
+    transition: all 0.3s ease;
 
 }
 
+.hamburger-menu span{
+    width: 30px;
+    height: 10px;
+    color: #fff;
+}
+
+
+/* スクロール後のヘッダースタイル */
+.header_logo.scrolled {
+    background-color: #333; /* ヘッダーの背景色を変更 */
+    padding: 10px 0; /* ヘッダーの高さを調整 */
+}
+
+.hamburger-menu {
+    display: none; /* 初期状態でハンバーガーメニューを非表示 */
+
+}
+
+/* スクロール後のハンバーガーメニューを表示 */
+.header_logo.scrolled .hamburger-menu {
+    display: block;
+}
+
+
+
+
+
 .header_logoText{
+    margin: 0;
     font-size: 1.8rem;
     letter-spacing : 2px;
     color: #fff;
@@ -2537,10 +2681,7 @@ header{
     font-size: 1.3rem;
     border: 1px solid #fff;
     padding: 10px 15px;
-
 }
-
-
 
 .header_content{
     position: absolute;
@@ -2554,7 +2695,6 @@ header{
     font-size: 1.2rem;
     letter-spacing : 1px;
     color: #fff;
-
 }
 
 .header_title{
@@ -2570,6 +2710,71 @@ header{
 
 }
 
+
+.header_line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 100;
+    color: #bbb;
+    /* mix-blend-mode: exclusion; */
+    width: 1.5px;
+    height: 100px;
+    margin: auto;
+    writing-mode: vertical-rl;
+
+}
+
+.header_line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background-color: #bbb;
+    animation: scroll 1.5s infinite;
+
+}
+
+.header_line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.5px;
+    background-color: #fff;
+    animation-name: lineAnima;/*アニメーションの名前*/
+    animation-duration: 4s;/*アニメーションの時間の長さ：4秒*/
+    animation-timing-function: ease;/*アニメーションの変化のしかた：開始・終了ともに緩やか*/
+    animation-iteration-count: infinite;/*アニメーションの繰り返し回数：無限*/
+
+}
+
+@keyframes lineAnima {
+    0% {
+        bottom: 100px;
+        height: 0;
+    }
+
+    40% {
+        bottom: 0;
+        height: 100px;
+    }
+
+    80% {
+        bottom: 0;
+        height: 0;
+    }
+
+    100% {
+        bottom: 0;
+        height: 0;
+    }
+}
+
+
 .header_guide{
     display: flex;
     justify-content: space-between;
@@ -2581,9 +2786,7 @@ header{
     box-sizing: border-box;
 }
 
-.header_guideBox{
 
-}
 
 .header_guideText{
     display: block;
@@ -2594,7 +2797,6 @@ header{
     border: 1px solid #fff;
     padding: 10px 15px;
 }
-
 
 .header_chatbotIcon{
     width: 50px;
@@ -2614,11 +2816,9 @@ main{
     margin-bottom: 300px;
 }
 
-.about_logo{
+.about_logo {
     width: 50%;
-
 }
-
 .about_img{
     width: 100%;
     height: 540px;
@@ -2661,14 +2861,12 @@ main{
     font-size: 1.4rem;
     line-height:2.5;
     letter-spacing : 1px;
-
-
 }
+
 .about_moreBox{
     display: flex;
     align-items: center;
     margin-top: 50px;
-
 }
 
 .about_more{
@@ -3238,10 +3436,69 @@ main{
 /* footer */
 
 .footer{
+    position: relative;
     padding-top: 180px;
     padding-bottom: 180px;
     background-image: url("../../assets/img/background-bk.jpg");
+}
 
+
+.footer_line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -60px;
+    display: flex;
+    z-index: 100;
+    color: #bbb;
+    /* mix-blend-mode: exclusion; */
+    width: 1.2px;
+    height: 120px;
+    margin: auto;
+    writing-mode: vertical-rl;
+
+}
+
+.footer_line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.2px;
+    background-color: #bbb;
+    animation: scroll 1.5s infinite;
+
+}
+
+.footer_line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.2px;
+    background-color: #ddd;
+    animation-name: footerLine;/*アニメーションの名前*/
+    animation-duration: 2s;/*アニメーションの時間の長さ：2秒*/
+    animation-timing-function:  cubic-bezier(0.9, 0, 1, 1);/*アニメーション緩急*/
+    animation-iteration-count: infinite;/*アニメーションの繰り返し回数：無限*/
+
+}
+
+@keyframes footerLine {
+    0% {
+        bottom: 0;
+        height: 0;
+    }
+
+    50% {
+        bottom: 0;
+        height: 120px;
+    }
+
+    100% {
+        bottom: 120px;
+        height: 0;
+    }
 }
 
 .footer_container{
@@ -3610,16 +3867,16 @@ header {
 
 @keyframes slide {
     0% {
-        transform: translateX(0) scale(1.1);
+        transform: translateX(0);
     }
 
     50% {
-        transform: translateX(-10px) scale(1.1);
+        transform: translateX(-10px);
         /* 右に10px動く */
     }
 
     100% {
-        transform: translateX(-20px) scale(1.1);
+        transform: translateX(-20px);
     }
 }
 
@@ -3734,6 +3991,71 @@ header {
     color: #fff;
 
 }
+
+.header_bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 100;
+    color: #bbb;
+    /* mix-blend-mode: exclusion; */
+    width: 1.5px;
+    height: 100px;
+    margin: auto;
+    writing-mode: vertical-rl;
+
+}
+
+.header_bottom::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background-color: #bbb;
+    animation: scroll 1.5s infinite;
+
+}
+
+.header_bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.5px;
+    background-color: #fff;
+    animation-name: lineAnima;/*アニメーションの名前*/
+    animation-duration: 4s;/*アニメーションの時間の長さ：4秒*/
+    animation-timing-function: ease;/*アニメーションの変化のしかた：開始・終了ともに緩やか*/
+    animation-iteration-count: infinite;/*アニメーションの繰り返し回数：無限*/
+
+}
+
+@keyframes lineAnima {
+    0% {
+        bottom: 100px;
+        height: 0;
+    }
+
+    40% {
+        bottom: 0;
+        height: 100px;
+    }
+
+    80% {
+        bottom: 0;
+        height: 0;
+    }
+
+    100% {
+        bottom: 0;
+        height: 0;
+    }
+}
+
+
 
 .header_guide {
     display: flex;
