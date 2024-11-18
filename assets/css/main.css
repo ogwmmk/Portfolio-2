@@ -26,7 +26,6 @@ html {
 }
 @media screen and (max-width: 1023px) { /*ウィンドウ幅が最大1023xまでの場合に適用_タブレット*/
 
-
 /* description */
 .ff_description{
     font-size: 2rem;
@@ -36,55 +35,9 @@ html {
 
 header{
     width: 100%;
-    height:100vh;
+    /* height:100vh; */
     margin: 0;
 }
-
-
-/* スライド */
-
-.header_container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url("../../assets/img/h-1.jpg");
-    background-size: cover;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-    animation: slide 5s linear infinite;
-    /* スライドアニメーション */
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(-10px);
-        /* 右に10px動く */
-    }
-
-    100% {
-        transform: translateX(-20px);
-    }
-}
-
-.header_container::before {
-    /* 透過した黒を上から重ねるイメージ */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* 自由に位置指定 */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: ' ';
-}
-
-/*  */
 
 .header_top {
     display: flex;
@@ -97,6 +50,7 @@ header{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .header_logo {}
@@ -151,8 +105,55 @@ header{
 
 }
 
+/* スライド */
+
+.header_container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.header_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100vh;
+    background-image: url("../../assets/img/h-1.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    animation: slide 5s linear infinite;
 
 
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+
+.header_image::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.4);
+    /* 自由に位置指定 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+
+/*  */
 .header_content {
     position: absolute;
     top: 50%;
@@ -181,7 +182,7 @@ header{
 
 }
 
-.header_bottom{
+.header_line{
     position: absolute;
     left: 0;
     right: 0;
@@ -197,7 +198,7 @@ header{
 
 }
 
-.header_bottom::before {
+.header_line::before {
     content: "";
     position: absolute;
     left: 0;
@@ -209,7 +210,7 @@ header{
 
 }
 
-.header_bottom::after {
+.header_line::after {
     content: "";
     position: absolute;
     left: 0;
@@ -254,6 +255,7 @@ header{
     width: 100%;
     color: #fff;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .header_guideBox {}
@@ -711,7 +713,7 @@ main {
 
 .blog_title {
     position: relative;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: lighter;
 }
 
@@ -720,11 +722,11 @@ main {
     /* border: 0.4px solid #ddd; */
     content: "";
     display: block;
-    width: 120px;
+    width: 100px;
     height: 1px;
     background-color: #666;
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -829,7 +831,7 @@ main {
 
 .reservation_title {
     position: relative;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: lighter;
 }
 
@@ -838,11 +840,11 @@ main {
     /* border: 0.4px solid #ddd; */
     content: "";
     display: block;
-    width: 120px;
+    width: 100px;
     height: 1px;
     background-color: #666;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -907,13 +909,71 @@ main {
 
 /* footer */
 
-.footer {
+.footer{
+    position: relative;
     padding-top: 180px;
-    padding-bottom: 240px;
+    padding-bottom: 180px;
     background-image: url("../../assets/img/background-bk.jpg");
+}
+
+
+.footer_line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -60px;
+    display: flex;
+    z-index: 100;
+    color: #bbb;
+    /* mix-blend-mode: exclusion; */
+    width: 1.2px;
+    height: 120px;
+    margin: auto;
+    writing-mode: vertical-rl;
 
 }
 
+.footer_line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.2px;
+    background-color: #bbb;
+    animation: scroll 1.5s infinite;
+
+}
+
+.footer_line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.2px;
+    background-color: #ddd;
+    animation-name: footerLine;/*アニメーションの名前*/
+    animation-duration: 2s;/*アニメーションの時間の長さ：2秒*/
+    animation-timing-function:  cubic-bezier(0.9, 0, 1, 1);/*アニメーション緩急*/
+    animation-iteration-count: infinite;/*アニメーションの繰り返し回数：無限*/
+
+}
+
+@keyframes footerLine {
+    0% {
+        bottom: 0;
+        height: 0;
+    }
+
+    50% {
+        bottom: 0;
+        height: 120px;
+    }
+
+    100% {
+        bottom: 120px;
+        height: 0;
+    }
+}
 .footer_container {
     /* display: flex; */
     justify-content: space-around;
@@ -1273,65 +1333,10 @@ main {
 
 header{
     width: 100%;
-    height:100vh;
+    /* height:100vh; */
     margin: 0;
 }
 
-
-    /* .header_container{
-        background: url("../../assets/img/h-1.jpg")no-repeat center;
-        background-size: cover;
-        position: relative;
-        width: 100%;
-        height:100%;
-        color:#fff;
-
-    } */
-
-/* スライド */
-
-.header_container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 95%;
-    height: 100%;
-    background-image: url("../../assets/img/h-1.jpg");
-    background-size: 110%;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-    animation: slide 5s linear infinite;
-    /* スライドアニメーション */
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(-10px);
-        /* 右に10px動く */
-    }
-
-    100% {
-        transform: translateX(-20px);
-    }
-}
-
-.header_container::before {
-    /* 透過した黒を上から重ねるイメージ */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* 自由に位置指定 */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: ' ';
-}
-
-/*  */
 
 .header_top {
     display: flex;
@@ -1344,6 +1349,7 @@ header{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .header_logo {}
@@ -1400,6 +1406,56 @@ header{
 
 }
 
+/* スライド */
+
+.header_container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.header_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100vh;
+    background-image: url("../../assets/img/h-1.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    animation: slide 5s linear infinite;
+
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+
+.header_image::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.4);
+    /* 自由に位置指定 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+
+
+/*  */
 
 
 .header_content {
@@ -1430,7 +1486,7 @@ header{
 
 }
 
-.header_bottom{
+.header_line{
     position: absolute;
     left: 0;
     right: 0;
@@ -1440,13 +1496,13 @@ header{
     color: #bbb;
     /* mix-blend-mode: exclusion; */
     width: 1.5px;
-    height: 100px;
+    height: 70px;
     margin: auto;
     writing-mode: vertical-rl;
 
 }
 
-.header_bottom::before {
+.header_line::before {
     content: "";
     position: absolute;
     left: 0;
@@ -1458,7 +1514,7 @@ header{
 
 }
 
-.header_bottom::after {
+.header_line::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1473,13 +1529,13 @@ header{
 
 @keyframes lineAnima {
     0% {
-        bottom: 100px;
+        bottom: 70px;
         height: 0;
     }
 
     40% {
         bottom: 0;
-        height: 100px;
+        height: 70px;
     }
 
     80% {
@@ -1494,6 +1550,7 @@ header{
 }
 
 
+
 .header_guide {
     display: flex;
     justify-content: space-between;
@@ -1503,6 +1560,7 @@ header{
     width: 100%;
     color: #fff;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .header_guideBox {}
@@ -1955,7 +2013,7 @@ main {
 
 .blog_title {
     position: relative;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: lighter;
 }
 
@@ -1964,7 +2022,7 @@ main {
     /* border: 0.4px solid #ddd; */
     content: "";
     display: block;
-    width: 120px;
+    width: 100px;
     height: 1px;
     background-color: #666;
     position: absolute;
@@ -2048,8 +2106,8 @@ main {
     align-items: center;
     margin: auto;
     margin-top: 30px;
-    width: 180px;
-    height: 50px;
+    width: 160px;
+    height: 45px;
     border: 1px solid #ccc;
     transition: all 0.3s ease 0s;
     cursor: pointer;
@@ -2090,7 +2148,7 @@ main {
 
 .reservation_title {
     position: relative;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: lighter;
 }
 
@@ -2099,7 +2157,7 @@ main {
     /* border: 0.4px solid #ddd; */
     content: "";
     display: block;
-    width: 120px;
+    width: 100px;
     height: 1px;
     background-color: #666;
     position: absolute;
@@ -2168,11 +2226,70 @@ main {
 
 /* footer */
 
-.footer {
+.footer{
+    position: relative;
     padding-top: 180px;
-    padding-bottom: 240px;
+    padding-bottom: 180px;
     background-image: url("../../assets/img/background-bk.jpg");
+}
 
+
+.footer_line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -40px;
+    display: flex;
+    z-index: 100;
+    color: #bbb;
+    /* mix-blend-mode: exclusion; */
+    width: 1.2px;
+    height: 60px;
+    margin: auto;
+    writing-mode: vertical-rl;
+
+}
+
+.footer_line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.2px;
+    background-color: #bbb;
+    animation: scroll 1.5s infinite;
+
+}
+
+.footer_line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.2px;
+    background-color: #ddd;
+    animation-name: footerLine;/*アニメーションの名前*/
+    animation-duration: 2s;/*アニメーションの時間の長さ：2秒*/
+    animation-timing-function:  cubic-bezier(0.9, 0, 1, 1);/*アニメーション緩急*/
+    animation-iteration-count: infinite;/*アニメーションの繰り返し回数：無限*/
+
+}
+
+@keyframes footerLine {
+    0% {
+        bottom: 0;
+        height: 0;
+    }
+
+    50% {
+        bottom: 0;
+        height: 60px;
+    }
+
+    100% {
+        bottom: 60px;
+        height: 0;
+    }
 }
 
 .footer_container {
@@ -2532,52 +2649,10 @@ main {
 
 header{
     width: 100%;
-    height:100vh;
+    /* height:100vh; */
     margin: 0;
 }
 
-/* スライド */
-
-.header_container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url("../../assets/img/h-1.jpg");
-    background-size: cover;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-    animation: slide 5s linear infinite;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-10px);
-    }
-    100% {
-        transform: translateX(-20px);
-    }
-}
-
-
-.header_container::before{
-    /* 透過した黒を上から重ねるイメージ */
-    background-color: rgba(0,0,0,0.4);
-    /* 自由に位置指定 */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: ' ';
-}
-
-
-/*  */
 
 .header_top{
     display: flex;
@@ -2590,6 +2665,7 @@ header{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .header_nav{
@@ -2629,10 +2705,6 @@ header{
 .header_logo.scrolled .hamburger-menu {
     display: block;
 }
-
-
-
-
 
 .header_logoText{
     margin: 0;
@@ -2682,6 +2754,58 @@ header{
     border: 1px solid #fff;
     padding: 10px 15px;
 }
+
+
+/* スライド */
+
+
+.header_container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.header_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100vh;
+    background-image: url("../../assets/img/h-1.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    animation: slide 5s linear infinite;
+
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+
+.header_image::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.4);
+    /* 自由に位置指定 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+
+
 
 .header_content{
     position: absolute;
@@ -2784,6 +2908,7 @@ header{
     width: 100%;
     color: #fff;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 
@@ -3831,71 +3956,12 @@ main{
     font-weight: lighter;
     letter-spacing : 1.5px;
 }
-
 header {
-        width: 100%;
-        height: 100vh;
-        margin: 0;
-    }
-
-
-/* .header_container{
-    background: url("../../assets/img/h-1.jpg")no-repeat center;
-    background-size: cover;
     position: relative;
     width: 100%;
-    height:100%;
-    color:#fff;
-    } */
-
-/* スライド */
-
-.header_container {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 95%;
-    height: 100%;
-    background-image: url("../../assets/img/h-1.jpg");
-    background-size: 110%;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-    animation: slide 5s linear infinite;
-    /* スライドアニメーション */
+    /* height: 100vh; */
+    margin: 0;
 }
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(-10px);
-        /* 右に10px動く */
-    }
-
-    100% {
-        transform: translateX(-20px);
-    }
-}
-
-
-
-.header_container::before {
-    /* 透過した黒を上から重ねるイメージ */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* 自由に位置指定 */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: ' ';
-}
-
-
-/*  */
 
 .header_top {
     display: flex;
@@ -3908,6 +3974,7 @@ header {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .header_logo {}
@@ -3963,6 +4030,61 @@ header {
 }
 
 
+/* スライド */
+
+.header_container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+        max-width: 100vw;
+
+}
+
+.header_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 120%; */
+    /* width: clamp(100%, 120%, 100vw); */
+    width: calc(100% + 100px);
+    /* max-width: 100vw; 画面幅を超えない */
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/img/h-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background_image 1s ease-in-out;
+    animation: slide 5s linear infinite;
+
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+
+.header_image::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.4);
+    /* 自由に位置指定 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+
 
 .header_content {
     position: absolute;
@@ -3991,8 +4113,7 @@ header {
     color: #fff;
 
 }
-
-.header_bottom{
+.header_line {
     position: absolute;
     left: 0;
     right: 0;
@@ -4008,7 +4129,7 @@ header {
 
 }
 
-.header_bottom::before {
+.header_line::before {
     content: "";
     position: absolute;
     left: 0;
@@ -4020,16 +4141,20 @@ header {
 
 }
 
-.header_bottom::after {
+.header_line::after {
     content: "";
     position: absolute;
     left: 0;
     width: 1.5px;
     background-color: #fff;
-    animation-name: lineAnima;/*アニメーションの名前*/
-    animation-duration: 4s;/*アニメーションの時間の長さ：4秒*/
-    animation-timing-function: ease;/*アニメーションの変化のしかた：開始・終了ともに緩やか*/
-    animation-iteration-count: infinite;/*アニメーションの繰り返し回数：無限*/
+    animation-name: lineAnima;
+    /*アニメーションの名前*/
+    animation-duration: 4s;
+    /*アニメーションの時間の長さ：4秒*/
+    animation-timing-function: ease;
+    /*アニメーションの変化のしかた：開始・終了ともに緩やか*/
+    animation-iteration-count: infinite;
+    /*アニメーションの繰り返し回数：無限*/
 
 }
 
@@ -4055,8 +4180,6 @@ header {
     }
 }
 
-
-
 .header_guide {
     display: flex;
     justify-content: space-between;
@@ -4066,11 +4189,22 @@ header {
     width: 100%;
     color: #fff;
     box-sizing: border-box;
+    z-index: 100;
 }
 
-.header_guideBox {}
+.header_guideBox {
+    position: relative;
+    z-index: 100;
+
+
+}
 
 .header_guideText {
+    position: fixed; /* 常に同じ場所に固定 */
+    bottom: 20px;    /* 画面下からの距離 */
+    left: 20px;     /* 画面右からの距離 */
+    object-fit: cover;
+    /* transition: opacity 0.5s ease-in-out; */
     display: block;
     text-decoration: none;
     color: #fff;
@@ -4080,11 +4214,29 @@ header {
     padding: 10px 15px;
 }
 
+.header_chatbot{
+    position: relative;
+
+}
 
 .header_chatbotIcon {
-    width: 50px;
-    height: 50px;
+    position: fixed; /* 常に同じ場所に固定 */
+    bottom: 20px;    /* 画面下からの距離 */
+    right: 20px;     /* 画面右からの距離 */
+    width: 50px;    /* 小さい画像の幅 */
+    height: 50px;   /* 小さい画像の高さ */
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
+
+.header_chatbotIcon.active {
+    opacity: 1;
+}
+
+/*  */
+
+/*  */
 
 /* main */
 
@@ -4763,11 +4915,70 @@ main {
 
 /* footer */
 
-.footer {
+.footer{
+    position: relative;
     padding-top: 180px;
     padding-bottom: 180px;
     background-image: url("../../assets/img/background-bk.jpg");
+}
 
+
+.footer_line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -60px;
+    display: flex;
+    z-index: 100;
+    color: #bbb;
+    /* mix-blend-mode: exclusion; */
+    width: 1.2px;
+    height: 120px;
+    margin: auto;
+    writing-mode: vertical-rl;
+
+}
+
+.footer_line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.2px;
+    background-color: #bbb;
+    animation: scroll 1.5s infinite;
+
+}
+
+.footer_line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.2px;
+    background-color: #ddd;
+    animation-name: footerLine;/*アニメーションの名前*/
+    animation-duration: 2s;/*アニメーションの時間の長さ：2秒*/
+    animation-timing-function:  cubic-bezier(0.9, 0, 1, 1);/*アニメーション緩急*/
+    animation-iteration-count: infinite;/*アニメーションの繰り返し回数：無限*/
+
+}
+
+@keyframes footerLine {
+    0% {
+        bottom: 0;
+        height: 0;
+    }
+
+    50% {
+        bottom: 0;
+        height: 120px;
+    }
+
+    100% {
+        bottom: 120px;
+        height: 0;
+    }
 }
 
 .footer_container {
@@ -5118,4 +5329,4 @@ main {
 }
 
 
-
+}
