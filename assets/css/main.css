@@ -109,23 +109,24 @@ header{
 
 .header_container{
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    max-width: 100vw;
+    overflow: hidden
 }
 
 .header_image{
     position: absolute;
     top: 0;
     left: 0;
-    width: 120%;
+    width: 110%;
     height: 100vh;
     background-image: url("../../assets/img/h-1.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    transition: background-image 1s ease-in-out;
+    transition: background_image 1s ease-in-out;
     animation: slide 5s linear infinite;
-
-
 }
 
 @keyframes slide {
@@ -1410,23 +1411,24 @@ header{
 
 .header_container{
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    max-width: 100vw;
+    overflow: hidden
 }
 
 .header_image{
     position: absolute;
     top: 0;
     left: 0;
-    width: 120%;
+    width: 110%;
     height: 100vh;
     background-image: url("../../assets/img/h-1.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    transition: background-image 1s ease-in-out;
+    transition: background_image 1s ease-in-out;
     animation: slide 5s linear infinite;
-
-
 }
 
 @keyframes slide {
@@ -2758,23 +2760,25 @@ header{
 
 /* スライド */
 
-
 .header_container{
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    max-width: 100vw;
+    overflow: hidden
 }
 
 .header_image{
     position: absolute;
     top: 0;
     left: 0;
-    width: 120%;
+    width: 110%;
     height: 100vh;
     background-image: url("../../assets/img/h-1.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    transition: background-image 1s ease-in-out;
+    transition: background_image 1s ease-in-out;
     animation: slide 5s linear infinite;
 
 
@@ -4036,19 +4040,15 @@ header {
     position: relative;
     width: 100vw;
     height: 100vh;
-        max-width: 100vw;
-
+    max-width: 100vw;
+    overflow: hidden
 }
 
 .header_image{
     position: absolute;
     top: 0;
     left: 0;
-    /* width: 120%; */
-    /* width: clamp(100%, 120%, 100vw); */
-    width: calc(100% + 100px);
-    /* max-width: 100vw; 画面幅を超えない */
-    width: 100vw;
+    width: 110%;
     height: 100vh;
     background-image: url("../../assets/img/h-1.jpg");
     background-size: cover;
