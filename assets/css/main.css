@@ -1331,7 +1331,7 @@ main {
 
 /* ここまで */
 
-/* ホバー 予約 */
+/* ホバー reservation_info 予約 */
 
 .reservation_infoBox:hover {
     background-color: black;
@@ -1341,8 +1341,38 @@ main {
     color: #fff;
 }
 
+/* ホバー  header_menuBtn 予約*/
 
-/* ここまで */
+.header_menuBtn:hover{
+    background-color: #fff;
+}
+
+.header_menuBtn:hover  {
+    color: black;
+}
+
+.headerColorHover:hover{
+    background-color: black;
+}
+
+
+.headerColorHover:hover  {
+    color: #fff;
+}
+
+
+
+/* フェードイン */
+.fade-in {
+    opacity: 0; /* 初期状態は透明 */
+    transform: translateY(20px); /* 下からスライド */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置に */
+}
 }
 
 
@@ -2672,7 +2702,7 @@ main {
 
 /* ここまで */
 
-/* ホバー 予約 */
+/* ホバー reservation_info 予約 */
 
 .reservation_infoBox:hover {
     background-color: black;
@@ -2682,8 +2712,38 @@ main {
     color: #fff;
 }
 
+/* ホバー  header_menuBtn 予約*/
 
-/* ここまで */
+.header_menuBtn:hover{
+    background-color: #fff;
+}
+
+.header_menuBtn:hover  {
+    color: black;
+}
+
+.headerColorHover:hover{
+    background-color: black;
+}
+
+
+.headerColorHover:hover  {
+    color: #fff;
+}
+
+
+
+/* フェードイン */
+.fade-in {
+    opacity: 0; /* 初期状態は透明 */
+    transform: translateY(20px); /* 下からスライド */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置に */
+}
 }
 
 
@@ -4033,7 +4093,7 @@ main {
 
 /* ここまで */
 
-/* ホバー 予約 */
+/* ホバー reservation_info 予約 */
 
 .reservation_infoBox:hover {
     background-color: black;
@@ -4043,9 +4103,39 @@ main {
     color: #fff;
 }
 
+/* ホバー  header_menuBtn 予約*/
 
-/* ここまで */
+.header_menuBtn:hover{
+    background-color: #fff;
 }
+
+.header_menuBtn:hover  {
+    color: black;
+}
+
+.headerColorHover:hover{
+    background-color: black;
+}
+
+
+.headerColorHover:hover  {
+    color: #fff;
+}
+
+
+/* フェードイン */
+.fade-in {
+    opacity: 0; /* 初期状態は透明 */
+    transform: translateY(20px); /* 下からスライド */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置に */
+}
+}
+
 @media screen and (min-width: 1024px) { /*ウィンドウ幅が1024px以上の場合に適用_PC*/
 
 
@@ -5345,18 +5435,49 @@ main{
 
 /* ここまで */
 
-/* ホバー 予約 */
+/* ホバー reservation_info 予約 */
 
-.reservation_infoBox:hover{
+.reservation_infoBox:hover {
     background-color: black;
 }
 
-.reservation_infoBox:hover .reservation_info{
+.reservation_infoBox:hover .reservation_info {
+    color: #fff;
+}
+
+/* ホバー  header_menuBtn 予約*/
+
+.header_menuBtn:hover{
+    background-color: #fff;
+}
+
+.header_menuBtn:hover  {
+    color: black;
+}
+
+.headerColorHover:hover{
+    background-color: black;
+}
+
+
+.headerColorHover:hover  {
     color: #fff;
 }
 
 
+
 /* ここまで */
+/* フェードイン */
+.fade-in {
+    opacity: 0; /* 初期状態は透明 */
+    transform: translateY(20px); /* 下からスライド */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置に */
+}
 }
 
 
@@ -5466,8 +5587,9 @@ header {
     background-position: center;
     transition: background_image 1s ease-in-out;
     animation: slide 5s linear infinite;
-
-
+    filter: blur(15px); /* 初期状態: ぼやけた状態 */
+    animation: fadeInClear 2s ease-out forwards;
+}
 }
 
 @keyframes slide {
@@ -5493,8 +5615,30 @@ header {
     bottom: 0;
     left: 0;
     content: ' ';
+    background-color: black; /* 初期状態で黒く覆う */
+    opacity: 1; /* 完全に黒い */
+    animation: fadeOutBlack 2s ease-out forwards;
+    z-index: 10000;
 }
 
+
+@keyframes fadeInClear {
+    0% {
+      filter: blur(15px); /* 最初はぼやけている */
+    }
+    100% {
+      filter: blur(0); /* 徐々にクリアに */
+    }
+}
+
+@keyframes fadeOutBlack {
+    0% {
+      opacity: 1; /* 黒い状態 */
+    }
+    100% {
+      opacity: 0; /* 透明になる */
+    }
+}
 
 .header_content {
     position: absolute;
@@ -5503,6 +5647,7 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 
 .header_subtitle {
     font-size: 1.2rem;
@@ -5523,6 +5668,27 @@ header {
     color: #fff;
 
 }
+
+
+.header_content p,
+.header_content h1 {
+  filter: blur(3px); /* 初期ぼかし */
+  opacity: 0; /* 初期透明度 */
+  animation: fadeInClear2 4s ease-in-out forwards; /* アニメーション設定 */
+}
+
+/* アニメーション定義 */
+@keyframes fadeInClear2 {
+    0% {
+        filter: blur(3px);
+        opacity: 0;
+    }
+    100% {
+    filter: blur(0);
+    opacity: 1;
+    }
+}
+
 .header_line {
     position: absolute;
     left: 0;
@@ -5645,6 +5811,7 @@ header {
 /*  */
 
 /*  */
+
 
 /* main */
 
@@ -6543,9 +6710,6 @@ main {
 /*  ここまで*/
 
 
-
-
-
 .language {
     margin-top: 70px;
     margin-bottom: 50px;
@@ -6587,11 +6751,6 @@ main {
 }
 
 
-
-
-
-
-
 /* ここからhover */
 
 
@@ -6614,6 +6773,7 @@ main {
     border-color: #000;
     transition: color 0.2s ease-out;
 }
+
 
 /*  */
 
@@ -6712,9 +6872,8 @@ main {
 }
 
 
-/* ここまで */
 
-/* ホバー 予約 */
+/* ホバー reservation_info 予約 */
 
 .reservation_infoBox:hover {
     background-color: black;
@@ -6724,8 +6883,26 @@ main {
     color: #fff;
 }
 
+/* ホバー  header_menuBtn 予約*/
 
-/* ここまで */
+.header_menuBtn:hover{
+    background-color: #fff;
+}
+
+.header_menuBtn:hover  {
+    color: black;
+}
+
+.headerColorHover:hover{
+    background-color: black;
+}
+
+
+.headerColorHover:hover  {
+    color: #fff;
+}
+
+
 
 /* フェードイン */
 .fade-in {
@@ -6739,6 +6916,46 @@ main {
     transform: translateY(0); /* 元の位置に */
 }
 
+
+/* オープニングのライン */
+.opening_line{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: #bbb;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 1px;
+    overflow: hidden;
 }
 
 
+.opening_line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    animation: openingLine 1s forwards, openingLine-fadeOut 0.5s 0.8s forwards; /* アニメーションとフェードアウト */
+}
+@keyframes openingLine {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes openingLine-fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
