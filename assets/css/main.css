@@ -53,7 +53,44 @@ header{
     z-index: 100;
 }
 
-.header_logo {}
+
+.header_nav{
+    display: flex;
+    transition: background-color 0.3s;
+}
+
+.header_logo{
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu {
+    display: none; /* 初期状態でハンバーガーメニューを非表示 */
+}
+.hamburger-menu span {
+    display: block;
+    width: 40px;
+    height: 2px; /* 線の太さ */
+    margin: 5px 0;
+    background-color: black; /* 線の色 */
+    border-radius: 1px; /* 線の端を丸くする */
+    transition: all 0.3s ease; /* アニメーション用のトランジション */
+}
+
+.header_logo.scrolled .header_logoTitle {
+    display: none;
+}
+
+/* スクロール後のヘッダースタイル */
+.header_logo.scrolled {
+    padding: 10px 0; /* ヘッダーの高さを調整 */
+}
+
+
+/* スクロール後のハンバーガーメニューを表示 */
+.header_logo.scrolled .hamburger-menu {
+    display: block;
+}
+
 
 .header_logoText {
     font-size: 1.8rem;
@@ -1407,7 +1444,44 @@ header{
     z-index: 100;
 }
 
-.header_logo {}
+
+.header_nav{
+    display: flex;
+    transition: background-color 0.3s;
+}
+
+.header_logo{
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu {
+    display: none; /* 初期状態でハンバーガーメニューを非表示 */
+}
+.hamburger-menu span {
+    display: block;
+    width: 40px;
+    height: 2px; /* 線の太さ */
+    margin: 5px 0;
+    background-color: black; /* 線の色 */
+    border-radius: 1px; /* 線の端を丸くする */
+    transition: all 0.3s ease; /* アニメーション用のトランジション */
+}
+
+.header_logo.scrolled .header_logoTitle {
+    display: none;
+}
+
+/* スクロール後のヘッダースタイル */
+.header_logo.scrolled {
+    padding: 10px 0; /* ヘッダーの高さを調整 */
+}
+
+
+/* スクロール後のハンバーガーメニューを表示 */
+.header_logo.scrolled .hamburger-menu {
+    display: block;
+}
+
 
 .header_logoText {
     font-size: 1.8rem;
@@ -2776,7 +2850,44 @@ header {
     z-index: 100;
 }
 
-.header_logo {}
+
+.header_nav{
+    display: flex;
+    transition: background-color 0.3s;
+}
+
+.header_logo{
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu {
+    display: none; /* 初期状態でハンバーガーメニューを非表示 */
+}
+.hamburger-menu span {
+    display: block;
+    width: 40px;
+    height: 2px; /* 線の太さ */
+    margin: 5px 0;
+    background-color: black; /* 線の色 */
+    border-radius: 1px; /* 線の端を丸くする */
+    transition: all 0.3s ease; /* アニメーション用のトランジション */
+}
+
+.header_logo.scrolled .header_logoTitle {
+    display: none;
+}
+
+/* スクロール後のヘッダースタイル */
+.header_logo.scrolled {
+    padding: 10px 0; /* ヘッダーの高さを調整 */
+}
+
+
+/* スクロール後のハンバーガーメニューを表示 */
+.header_logo.scrolled .hamburger-menu {
+    display: block;
+}
+
 
 .header_logoText {
     font-size: 1.8rem;
@@ -4169,36 +4280,35 @@ header{
 
 .header_nav{
     display: flex;
-    /* align-items: center; */
-    /* padding: 1rem; */
-    /* position: fixed; */
-    /* width: 100%; */
-    /* top: 0; */
     transition: background-color 0.3s;
 }
 
 .header_logo{
     transition: all 0.3s ease;
-
-}
-
-.hamburger-menu span{
-    width: 30px;
-    height: 10px;
-    color: #fff;
-}
-
-
-/* スクロール後のヘッダースタイル */
-.header_logo.scrolled {
-    background-color: #333; /* ヘッダーの背景色を変更 */
-    padding: 10px 0; /* ヘッダーの高さを調整 */
 }
 
 .hamburger-menu {
     display: none; /* 初期状態でハンバーガーメニューを非表示 */
-
 }
+.hamburger-menu span {
+    display: block;
+    width: 40px;
+    height: 2px; /* 線の太さ */
+    margin: 5px 0;
+    background-color: black; /* 線の色 */
+    border-radius: 1px; /* 線の端を丸くする */
+    transition: all 0.3s ease; /* アニメーション用のトランジション */
+}
+
+.header_logo.scrolled .header_logoTitle {
+    display: none;
+}
+
+/* スクロール後のヘッダースタイル */
+.header_logo.scrolled {
+    padding: 10px 0; /* ヘッダーの高さを調整 */
+}
+
 
 /* スクロール後のハンバーガーメニューを表示 */
 .header_logo.scrolled .hamburger-menu {
@@ -4243,7 +4353,6 @@ header{
     text-decoration: none;
     color: #fff;
     font-size: 1.3rem;
-
 }
 
 .header_menuBtn{
@@ -4894,7 +5003,6 @@ main{
     top: 70px;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
 .blog_content{
@@ -4916,7 +5024,6 @@ main{
     justify-content:center;/* 水平方向中央揃え */
     box-sizing:border-box;/* 装飾用 */
     list-style:none;
-
 }
 
 .blog_item:nth-of-type(n+4) {
@@ -5512,7 +5619,44 @@ header {
     z-index: 100;
 }
 
-.header_logo {}
+
+.header_nav{
+    display: flex;
+    transition: background-color 0.3s;
+}
+
+.header_logo{
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu {
+    display: none; /* 初期状態でハンバーガーメニューを非表示 */
+}
+.hamburger-menu span {
+    display: block;
+    width: 40px;
+    height: 2px; /* 線の太さ */
+    margin: 5px 0;
+    background-color: black; /* 線の色 */
+    border-radius: 1px; /* 線の端を丸くする */
+    transition: all 0.3s ease; /* アニメーション用のトランジション */
+}
+
+.header_logo.scrolled .header_logoTitle {
+    display: none;
+}
+
+/* スクロール後のヘッダースタイル */
+.header_logo.scrolled {
+    padding: 10px 0; /* ヘッダーの高さを調整 */
+}
+
+
+/* スクロール後のハンバーガーメニューを表示 */
+.header_logo.scrolled .hamburger-menu {
+    display: block;
+}
+
 
 .header_logoText {
     font-size: 1.8rem;
