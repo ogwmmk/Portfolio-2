@@ -39,8 +39,6 @@ $(function () {
 
 
 
-
-
 //
 document.addEventListener("scroll", () => {
   const images = document.querySelectorAll(".header_chatbotIcon");
@@ -108,9 +106,8 @@ setInterval(changeBackgroundImage, 5000);
 
 
 //ハンバーガーメニュー/
-
 window.addEventListener('scroll', () => {
-  const header = document.getElementByClassName('header_logo');
+  const header = document.getElementsById('test');
   const scrollPosition = window.scrollY;
   const triggerHeight = 100; // クラスを切り替えるスクロール量（ピクセル単位）
 
@@ -121,3 +118,20 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// フェードイン
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeInElements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show'); // クラスを追加
+        observer.unobserve(entry.target);  // 一度だけ表示させる場合
+      }
+    });
+  });
+
+  fadeInElements.forEach((el) => observer.observe(el));
+});
