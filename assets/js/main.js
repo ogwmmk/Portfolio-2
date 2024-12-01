@@ -11,6 +11,21 @@ $(function () {
   });
 });
 
+// header_menuBtnホバーしたら色変わる
+$(function () {
+  $(window).on("scroll", function () {
+    const sliderHeight = $(".header_container").height();
+    if (sliderHeight - 30 < $(this).scrollTop()) {
+      $(".js-headerColor").addClass("headerColorHover");
+    } else {
+      $(".js-headerColor").removeClass("headerColorHover");
+    }
+  });
+});
+
+
+//
+
 // スクロールするとheader_LanguageTubの色変更
 $(function () {
   $(window).on("scroll", function () {
@@ -61,30 +76,7 @@ document.addEventListener("scroll", () => {
 
 
 
-
-// ヘッダー スライド
-
-// $(document).ready(function() {
-//   const images = [
-
-//       'assets/img/h-1.jpg',
-//       'assets/img/main_1.jpg',
-//       'assets/img/h-1.jpg',
-//   ];
-
-//   let currentIndex = 0;
-
-//   function changeBackground() {
-//       currentIndex = (currentIndex + 1) % images.length;
-//       $('.header_container').css('background-image', `url('${images[currentIndex]}')`);
-//   }
-
-//   // 5秒ごとに背景を変更
-//   setInterval(changeBackground, 5000);
-// });
-
-
-// ためし2
+//ヘッダーイメージ
 const images = [
       'assets/img/h-1.jpg',
       'assets/img/main_1.jpg',
@@ -119,8 +111,6 @@ window.addEventListener('scroll', () => {
 });
 
 // フェードイン
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const fadeInElements = document.querySelectorAll('.fade-in');
 
