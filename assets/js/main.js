@@ -52,8 +52,6 @@ $(function () {
   });
 });
 
-
-
 //
 document.addEventListener("scroll", () => {
   const images = document.querySelectorAll(".header_chatbotIcon");
@@ -71,9 +69,6 @@ document.addEventListener("scroll", () => {
     }
   });
 });
-
-
-
 
 
 //ヘッダーイメージ
@@ -99,7 +94,7 @@ setInterval(changeBackgroundImage, 5000);
 
 //ハンバーガーメニュー/
 window.addEventListener('scroll', () => {
-  const header = document.getElementsById('test');
+  const header = document.getElementById('js-hamburger');
   const scrollPosition = window.scrollY;
   const triggerHeight = 100; // クラスを切り替えるスクロール量（ピクセル単位）
 
