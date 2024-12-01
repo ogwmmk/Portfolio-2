@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Shippori+Mincho&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=New+Tegomin&family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+
     <title>温泉</title>
 </head>
 <body>
     <header>
         <div class="header_top js-header">
-            <div class="header_logo">
+            <div id="test" class="header_logo">
                 <nav class="header_nav">
                     <div class="header_logoTitle">
                         <p class="header_logoText js-header ff_logo">奥の湯</p>
@@ -60,13 +65,13 @@
         <div class="about">
             <!-- <div class="about_container"> -->
                 <div class="about_logo">
-                    <img class="about_img" src="assets/img/main_1.jpg" alt="画像">
+                    <img class="about_img fade-in" src="assets/img/main_1.jpg" alt="画像">
                 </div>
                 <div class="about_content" href="#">
-                    <p class="about_title ff">はじめに</p>
-                    <h2 class="about_description ff_description underline">阿蘇の大自然に包まれた宿</h2>
-                    <p class="about_text">黒田温泉全体を流れる田の原川上流の<br>静かな場所にたたずむ寛ぎ宿です。</p>
-                    <div class="about_moreBox">
+                    <p class="about_title ff fade-in">はじめに</p>
+                    <h2 class="about_description ff_description underline fade-in">阿蘇の大自然に包まれた宿</h2>
+                    <p class="about_text fade-in">黒田温泉全体を流れる田の原川上流の<br>静かな場所にたたずむ寛ぎ宿です。</p>
+                    <div class="about_moreBox fade-in">
                         <p class="about_more underline">More</p>
                         <div class="about_moreLogo"></div>
                     </div>
@@ -76,30 +81,30 @@
 
         <div class="facility">
             <div class="facility_content">
-                <p class="facility_title">館内</p>
-                <h2 class="facility_description ff_description underline">二千坪の敷地に佇む宿</h2>
-                <p class="facility_text">本館・新館・離れを囲むように、<br>全9種の多彩な湯船、他にも黒田唯一の蒸し湯や、<br>岩盤浴・温泉熱プールといった施設が点在しています。
+                <p class="facility_title fade-in">館内</p>
+                <h2 class="facility_description ff_description underline fade-in">二千坪の敷地に佇む宿</h2>
+                <p class="facility_text fade-in">本館・新館・離れを囲むように、<br>全9種の多彩な湯船、他にも黒田唯一の蒸し湯や、<br>岩盤浴・温泉熱プールといった施設が点在しています。
                 </p>
-                <div class="facility_moreBox">
+                <div class="facility_moreBox fade-in">
                     <p class="facility_more underline">More</p>
                     <div class="facility_moreLogo"></div>
                 </div>
             </div>
             <div class="facility_logo">
-                <img class="facility_img" src="assets/img/main_1.jpg" alt="画像">
+                <img class="facility_img fade-in" src="assets/img/main_1.jpg" alt="画像">
             </div>
         </div>
 
-        <div class="spa fade-in">
+        <div class="spa">
             <div class="spa_logo">
-                <img class="spa_img" src="assets/img/main_1.jpg" alt="画像">
+                <img class="spa_img fade-in" src="assets/img/main_1.jpg" alt="画像">
             </div>
             <div class="spa_content">
-                <p class="spa_title">温泉</p>
-                <h2 class="spa_description ff_description underline">静かに、ゆるやかな時間が、<br class="spa_br">疲れを流していきます
+                <p class="spa_title fade-in">温泉</p>
+                <h2 class="spa_description fade-in ff_description underline">静かに、ゆるやかな時間が、<br class="spa_br">疲れを流していきます
                 </h2>
-                <p class="spa_text">田の原川沿いに造られた混浴露天風呂、<br>神秘的な雰囲気な洞窟風呂など<br>風情ある多彩なお風呂がございます。</p>
-                <div class="spa_moreBox">
+                <p class="spa_text fade-in">田の原川沿いに造られた混浴露天風呂、<br>神秘的な雰囲気な洞窟風呂など<br>風情ある多彩なお風呂がございます。</p>
+                <div class="spa_moreBox fade-in">
                     <p class="spa_more underline">More</p>
                     <div class="spa_moreLogo"></div>
                 </div>
@@ -109,17 +114,17 @@
         <div class="meal">
             <div class="meal_container">
                 <div class="meal_content">
-                    <p class="meal_title">お食事</p>
-                    <h2 class="meal_description ff_description underline">地元の朝市で仕入れた<br>地元食材を使用した<br class="meal_br">田舎風会席料理</h2>
-                    <p class="meal_text">四季ごと、日ごとに変化する味わいを、<br class="meal_textBr">どうぞご堪能ください。
+                    <p class="meal_title fade-in">お食事</p>
+                    <h2 class="meal_description fade-in ff_description underline">地元の朝市で仕入れた<br>地元食材を使用した<br class="meal_br">田舎風会席料理</h2>
+                    <p class="meal_text fade-in">四季ごと、日ごとに変化する味わいを、<br class="meal_textBr">どうぞご堪能ください。
                     </p>
-                    <div class="meal_moreBox">
+                    <div class="meal_moreBox fade-in">
                         <p class="meal_more underline">More</p>
                         <div class="meal_moreLogo"></div>
                     </div>
                 </div>
                 <div class="meal_logo">
-                    <img class="meal_img" src="assets/img/main_1.jpg" alt="画像">
+                    <img class="meal_img fade-in" src="assets/img/main_1.jpg" alt="画像">
                 </div>
             </div>
         </div>
@@ -128,14 +133,14 @@
         <div class="room">
             <div class="room_container">
                 <div class="room_logo">
-                    <img class="room_img" src="assets/img/main_1.jpg" alt="画像">
+                    <img class="room_img fade-in" src="assets/img/main_1.jpg" alt="画像">
                 </div>
                 <div class="room_content">
-                    <p class="room_title">客室</p>
-                    <h2 class="room_description ff_description underline">耳を澄ますと聞こえる<br class="room_br">川のせせらぎ。<br>自然に包まれた庭園を望む。
+                    <p class="room_title fade-in">客室</p>
+                    <h2 class="room_description  fade-in ff_description underline">耳を澄ますと聞こえる<br class="room_br">川のせせらぎ。<br>自然に包まれた庭園を望む。
                     </h2>
-                    <p class="room_text">本館・新館・離れ、<br>趣の異なる全二十六室</p>
-                    <div class="room_moreBox">
+                    <p class="room_text fade-in">本館・新館・離れ、<br>趣の異なる全二十六室</p>
+                    <div class="room_moreBox fade-in">
                         <p class="room_more underline">More</p>
                         <div class="room_moreLogo"></div>
                     </div>
@@ -146,39 +151,40 @@
 
         <div class="blog">
             <div class="blog_top">
-                <h2 class="blog_title">ブログ</h2>
+                <h2 class="blog_title fade-in">ブログ</h2>
             </div>
             <ul class="blog_content">
-                <li class="blog_item">
+                <li class="blog_item fade-in">
                     <img class="blog_img" src="assets/img/main_1.jpg" alt="画像">
                     <p class="blog_heading">2024年9月29日  休館のおしらせ</p>
                     <p class="blog_text">※おしらせ※  10月休館のおしらせ&年末年始のご予約について</p>
                 </li>
-                <li class="blog_item">
+                <li class="blog_item fade-in">
                     <img class="blog_img" src="assets/img/main_1.jpg" alt="画像">
                     <p class="blog_heading">2024年9月29日  休館のおしらせ</p>
                     <p class="blog_text">※おしらせ※  10月休館のおしらせ&年末年始のご予約について</p>
                 </li>
-                <li class="blog_item">
+                <li class="blog_item fade-in">
                     <img class="blog_img" src="assets/img/main_1.jpg" alt="画像">
                     <p class="blog_heading">2024年9月29日  休館のおしらせ</p>
                     <p class="blog_text">※おしらせ※  10月休館のおしらせ&年末年始のご予約について</p>
                 </li>
-                <li class="blog_item">
+                <li class="blog_item fade-in">
                     <img class="blog_img" src="assets/img/main_1.jpg" alt="画像">
                     <p class="blog_heading">2024年9月29日  休館のおしらせ</p>
                     <p class="blog_text">※おしらせ※  10月休館のおしらせ&年末年始のご予約について</p>
                 </li>
-                <li class="blog_item">
-                    <img class="blog_img" src="assets/img/main_1.jpg" alt="画像">
-                    <p class="blog_heading">2024年9月29日  休館のおしらせ</p>
-                    <p class="blog_text">※おしらせ※  10月休館のおしらせ&年末年始のご予約について</p>
-                </li>                <li class="blog_item">
+                <li class="blog_item fade-in">
                     <img class="blog_img" src="assets/img/main_1.jpg" alt="画像">
                     <p class="blog_heading">2024年9月29日  休館のおしらせ</p>
                     <p class="blog_text">※おしらせ※  10月休館のおしらせ&年末年始のご予約について</p>
                 </li>
-                <li class="blog_item">
+                <li class="blog_item fade-in">
+                    <img class="blog_img" src="assets/img/main_1.jpg" alt="画像">
+                    <p class="blog_heading">2024年9月29日  休館のおしらせ</p>
+                    <p class="blog_text">※おしらせ※  10月休館のおしらせ&年末年始のご予約について</p>
+                </li>
+                <li class="blog_item fade-in">
                     <img class="blog_img" src="assets/img/main_1.jpg" alt="画像">
                     <p class="blog_heading">2024年9月29日  休館のおしらせ</p>
                     <p class="blog_text">※おしらせ※  10月休館のおしらせ&年末年始のご予約について</p>
@@ -191,17 +197,17 @@
 
         <div class="reservation">
             <div class="reservation_top">
-                <h2 class="reservation_title">ご予約</h2>
+                <h2 class="reservation_title fade-in">ご予約</h2>
             </div>
             <div class="reservation_content">
-                <p class="reservation_text">ご予約は専門予約フォームまたは、<br class="reservation_br">お電話にて承ります。</p>
-                <p class="reservation_subText">当サイトからのご予約が最もお得です。</p>
+                <p class="reservation_text fade-in">ご予約は専門予約フォームまたは、<br class="reservation_br">お電話にて承ります。</p>
+                <p class="reservation_subText fade-in">当サイトからのご予約が最もお得です。</p>
             </div>
-            <div class="reservation_infoBox">
+            <div class="reservation_infoBox fade-in">
                 <a class="reservation_info" href="#">宿泊のご予約はこちら</a>
             </div>
-            <p class="reservation_tel">Tel. 1234-56-7890</p>
-            <p class="reservation_time">受付時間 9:00 〜 19:00</p>
+            <p class="reservation_tel fade-in">Tel. 1234-56-7890</p>
+            <p class="reservation_time fade-in">受付時間 9:00 〜 19:00</p>
         </div>
     </main>
 
