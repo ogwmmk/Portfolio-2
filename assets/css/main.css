@@ -5734,7 +5734,6 @@ header {
     filter: blur(15px); /* 初期状態: ぼやけた状態 */
     animation: fadeInClear 2s ease-out forwards;
 }
-}
 
 @keyframes slide {
     0% {
@@ -7102,4 +7101,6 @@ main {
     100% {
         opacity: 0;
     }
+}
+
 }
