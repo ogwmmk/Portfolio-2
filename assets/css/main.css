@@ -4249,7 +4249,6 @@ main {
 
 @media screen and (min-width: 1024px) { /*ウィンドウ幅が1024px以上の場合に適用_PC*/
 
-
 /* description */
 .ff_description{
     font-size: 2.2rem;
@@ -4386,8 +4385,6 @@ header{
     background-position: center;
     transition: background_image 1s ease-in-out;
     animation: slide 5s linear infinite;
-
-
 }
 
 @keyframes slide {
@@ -4731,15 +4728,11 @@ main{
 }
 
 
-
-
-
-
 /* spa */
 
 .spa{
     display: flex;
-    padding-bottom: 300px;
+    padding-bottom: 250px;
 }
 
 .spa_logo{
@@ -4815,82 +4808,99 @@ main{
 }
 
 
-
-
 /* meal */
 
-.meal{
-    display: flex;
+.meal {
+    position: relative;
     padding-bottom: 300px;
-    /* background-image: url("../../assets/img/background-gry.jpg"); */
 }
 
-.meal_logo{
-    width: 50%;
-    margin-right: 50px;
-}
-
-.meal_img{
+.meal::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
     width: 100%;
-    height: 700px;
-    margin-top: -100px;
+    height: 100%;
+    background-image: url("../../assets/img/background-gry.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* 背景として要素の背面に配置 */
+}
+
+.meal_container{
+    display: flex;
+    width: 90%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.meal_logo {
+    width: 60%;
+    margin-right: 0;
+}
+
+.meal_img {
+    width: 100%;
+    height: 600px;
+    margin-top: 0;
     object-fit: cover;
-
-/*  ためす */
-    max-width: 800px; /* 最大幅 */
-    min-width: 240px; /* 最小幅 */
+    max-width: 800px;    /* 最大幅 */
 }
 
 
-.meal_content{
-    max-width: 500px;
+.meal_content {
+    max-width: 600px;
     width: 40%;
-    padding-top: 180px;
-    padding-left: 140px;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
-.meal_title{
+.meal_title {
     display: flex;
     align-items: center;
     font-size: 1.4rem;
 
 }
 
-.meal_title::after{
+.meal_title::after {
     border: 0.4px solid #ddd;
     content: "";
     width: 70px;
 }
 
-.meal_title::after{
+.meal_title::after {
     margin-left: 15px;
 }
 
-.meal_description{
+.meal_description {
     margin-top: 20px;
-    line-height:2;
-
-
+    line-height: 2;
 }
 
-.meal_text{
+.meal_text {
     margin-top: 80px;
     font-size: 1.4rem;
-    line-height:2.5;
-    letter-spacing : 1px;
+    line-height: 2.5;
+    letter-spacing: 1px;
 }
 
-.meal_moreBox{
+.meal_moreBox {
     display: flex;
     align-items: center;
     margin-top: 50px;
+
 }
 
-.meal_more{
+.meal_more {
     font-size: 1.4rem;
 }
 
-.meal_moreLogo{
+.meal_moreLogo {
     margin-left: 20px;
     width: 50px;
     height: 5px;
@@ -4898,87 +4908,100 @@ main{
     border-right: 1px solid #666;
     transform: skew(45deg);
 }
+
 
 
 /* room */
 
-.room{
+.room {
     display: flex;
     padding-bottom: 300px;
+
 }
 
-.room_logo{
-    width: 50%;
-}
-
-.room_img{
+.room_container{
+    display: flex;
     width: 90%;
-    height: 680px;
-    margin-top: -100px;
-    margin-left: 60px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.room_logo {
+    width: 60%;
+
+}
+
+.room_img {
+    width: 100%;
+    height: 600px;
+    margin-top: 0;
+    margin-left: 0;
     object-fit: cover;
 }
 
 
-.room_content{
-    max-width: 500px;
+.room_content {
+    max-width: 600px;
     width: 40%;
-    padding-top: 140px;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    padding-right: 100px;
     padding-left: 100px;
 }
 
-.room_title{
+
+
+.room_title {
     display: flex;
     align-items: center;
     font-size: 1.4rem;
+
 }
 
-.room_title::after{
+.room_title::after {
     border: 0.4px solid #ddd;
     content: "";
     width: 70px;
 }
 
-.room_title::after{
+.room_title::after {
     margin-left: 15px;
 }
 
-.room_description{
+.room_description {
     margin-top: 20px;
-    line-height:2;
+    line-height: 2;
 }
 
-.room_text{
+
+.room_text {
     margin-top: 80px;
     font-size: 1.4rem;
-    line-height:2.5;
-    letter-spacing : 1px;
+    line-height: 2.5;
+    letter-spacing: 1px;
 }
 
-.room_moreBox{
+.room_moreBox {
     display: flex;
     align-items: center;
     margin-top: 50px;
 }
 
-.room_more{
+.room_more {
     font-size: 1.4rem;
 }
 
-.room_moreLogo{
-    margin-left: 20px;
+.room_moreLogo {
     width: 50px;
     height: 5px;
+    margin-left: 20px;
+    transform: skew(45deg);
     border-bottom: 1px solid #666;
     border-right: 1px solid #666;
-    transform: skew(45deg);
 }
 
 /* blog ブログ*/
-
-.blog{
-
-}
 
 .blog_top{
     display: flex;
@@ -4993,16 +5016,15 @@ main{
 
 
 .blog_title::after{
-    /* border: 0.4px solid #ddd; */
     content:"";
     display:block;
-    width: 120px;
-    height:1px;
-    background-color:#666;
     position:absolute;
     top: 70px;
     left: 50%;
     transform: translateX(-50%);
+    width: 120px;
+    height:1px;
+    background-color:#666;
 }
 
 .blog_content{
@@ -5044,8 +5066,6 @@ main{
     flex-grow:1;/* 高さを揃えるため指定 */
     overflow-wrap: break-word;
     padding-left: 20px;
-
-
 }
 
 .blog_viewBox{
@@ -5061,9 +5081,6 @@ main{
     cursor: pointer;
 }
 
-/* .blog_viewBox:hover{
-    opacity: 0.6;
-} */
 
 .blog_viewBox:hover{
     border-color: black;
@@ -5248,10 +5265,7 @@ main{
 
 .footer_top{
     writing-mode: vertical-rl;
-
-    /* width: 33.333%; */
-
-
+    margin-left: 60px;
 }
 
 .footer_subTitle{
@@ -5268,7 +5282,7 @@ main{
 }
 
 .footer_content{
-    margin-left: 200px;
+    margin-left: 160px;
     width: 33.333%;
 }
 
@@ -5439,15 +5453,7 @@ main{
     text-decoration: none;
     font-size: 1rem;
     color: #ccc;
-
 }
-
-
-
-
-
-
-
 /* ここからhover */
 
 
@@ -5587,10 +5593,7 @@ main{
 }
 }
 
-
-
 @media screen and (min-width: 1280px) { /*ウィンドウ幅が1280px以上の場合に適用_PC*/
-
 
 /* description */
 .ff_description{
@@ -5598,6 +5601,7 @@ main{
     font-weight: lighter;
     letter-spacing : 1.5px;
 }
+
 header {
     position: relative;
     width: 100%;
@@ -6126,11 +6130,6 @@ main {
     border-right: 1px solid #666;
     transform: skew(45deg);
 }
-
-
-
-
-
 
 /* spa */
 
@@ -7102,5 +7101,4 @@ main {
         opacity: 0;
     }
 }
-
 }
