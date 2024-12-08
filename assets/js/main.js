@@ -53,21 +53,39 @@ $(function () {
 });
 
 //
-document.addEventListener("scroll", () => {
-  const images = document.querySelectorAll(".header_chatbotIcon");
+// document.addEventListener("scroll", () => {
+//   const images = document.querySelectorAll(".header_chatbotIcon");
+//   const scrollPosition = window.scrollY;
+//   const windowHeight = window.innerHeight;
+
+//   images.forEach((image, index) => {
+//     const start = index * windowHeight;
+//     const end = (index + 1) * windowHeight;
+
+//     if (scrollPosition >= start && scrollPosition < end) {
+//       image.classList.add("active");
+//     } else {
+//       image.classList.remove("active");
+//     }
+//   });
+// });
+//
+
+// 
+window.addEventListener('scroll', function() {
   const scrollPosition = window.scrollY;
-  const windowHeight = window.innerHeight;
+  const changeHeight = 300; // 画像を変更するスクロール位置
 
-  images.forEach((image, index) => {
-    const start = index * windowHeight;
-    const end = (index + 1) * windowHeight;
+  const icon1 = document.querySelectorAll('.header_chatbotIcon')[0]; // 最初の画像
+  const icon2 = document.querySelectorAll('.header_chatbotIcon')[1]; // 2番目の画像
 
-    if (scrollPosition >= start && scrollPosition < end) {
-      image.classList.add("active");
-    } else {
-      image.classList.remove("active");
-    }
-  });
+  if (scrollPosition > changeHeight) {
+    icon1.classList.remove('active'); // 最初の画像を非表示
+    icon2.classList.add('active');    // 2番目の画像を表示
+  } else {
+    icon1.classList.add('active');    // 最初の画像を表示
+    icon2.classList.remove('active'); // 2番目の画像を非表示
+  }
 });
 
 
@@ -119,4 +137,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   fadeInElements.forEach((el) => observer.observe(el));
+});
+
+
+
+// ハンバーガーメニューとメニューを取得
+const hamburger = document.querySelector('.hamburger-menu');
+const menu = document.getElementById('menu');
+
+// ハンバーガーメニューをクリックしたときのイベント
+hamburger.addEventListener('click', () => {
+  // メニューの表示/非表示を切り替え
+  menu.classList.toggle('show');
+
+  // ハンバーガーアイコンのアニメーション切り替え
+  hamburger.classList.toggle('active');
 });
