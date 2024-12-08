@@ -4327,7 +4327,7 @@ header{
 /*      footer */
 
 .hamburger-wrap{
-    /* display: none; */
+    display: none;
     /* position: relative; */
     position: absolute;
     top: 0; /* ヘッダーの下に表示 */
@@ -4382,8 +4382,11 @@ header{
 }
 
 .hamburger_container{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
 }
 
 .hamburger_contents{
@@ -4449,6 +4452,17 @@ header{
 
 .hamburger_bottom{
     width: 33.333%;
+}
+.hamburger_info{
+    display: flex;
+}
+.hamburger_infoTitle{
+    writing-mode: vertical-rl; /* 縦書き (右から左) */
+
+}
+
+.hamburger_box{
+    padding-left: 50px;
 }
 
 .hamburger_tel{
