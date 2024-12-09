@@ -153,3 +153,10 @@ hamburger.addEventListener('click', () => {
   // ハンバーガーアイコンのアニメーション切り替え
   hamburger.classList.toggle('active');
 });
+
+// メニュー自体をクリックしたときに閉じる
+menu.addEventListener('click', () => {
+  menu.classList.remove('show');
+  hamburger.classList.remove('active');
+});
+
