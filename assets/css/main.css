@@ -50,7 +50,7 @@ header{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    z-index: 100;
+    z-index: 1000;
 }
 
 
@@ -1441,7 +1441,7 @@ header{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    z-index: 100;
+    z-index: 1000;
 }
 
 
@@ -2838,7 +2838,7 @@ header {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    z-index: 100;
+    z-index: 1000;
 }
 
 
@@ -4274,7 +4274,7 @@ header{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .header_nav{
@@ -4297,6 +4297,9 @@ header{
     background-color: black; /* 線の色 */
     border-radius: 1px; /* 線の端を丸くする */
     transition: all 0.3s ease; /* アニメーション用のトランジション */
+}
+.hamburger-menu.active span {
+    background-color: #fff;
 }
 
 .header_logo.scrolled .header_logoTitle {
@@ -4327,14 +4330,14 @@ header{
 /*      footer */
 
 .hamburger-wrap{
-    /* display: none; */
-    /* position: relative; */
-    position: absolute;
+    display: none;
+    position: fixed; /* 固定表示に変更 */
     top: 0; /* ヘッダーの下に表示 */
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
+    overflow-y: auto; /* 縦スクロールを有効化 */
     background-image: url("../../assets/img/background-bk.jpg");
     opacity: 0.9;
     color: #ddd;
@@ -4345,7 +4348,7 @@ header{
 }
 
 .hamburger-box{
-    padding: 100px 200px;
+    padding: 100px 160px;
 
 }
 
@@ -4382,11 +4385,10 @@ header{
 }
 
 .hamburger_container{
-    /* display: flex; */
-    /* justify-content: space-between; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    margin-top: 100px;
 }
 
 .hamburger_contents{
@@ -4402,6 +4404,7 @@ header{
 
 .hamburger_contentsTitle{
     writing-mode: vertical-rl; /* 縦書き (右から左) */
+    font-size: 1.2em;
 
 }
 .hamburger_content{
@@ -4421,7 +4424,7 @@ header{
 
 .hamburger_text{
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 2em;
     letter-spacing: 1px;
     color: #ccc;
 }
@@ -4433,11 +4436,13 @@ header{
 
 
 .hamburger_guide{
+    margin-top: 30px;
+    padding: 0;
 }
 
 .hamburger_guideList{
     list-style:none;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
 .hamburger_guideText{
@@ -4453,16 +4458,14 @@ header{
     color: #fff;
 }
 
-.hamburger_bottom{
-    width: 33.333%;
-}
+
 .hamburger_info{
     display: flex;
     order: 2;
 }
 .hamburger_infoTitle{
     writing-mode: vertical-rl; /* 縦書き (右から左) */
-
+    font-size: 1.2em;
 }
 
 .hamburger_box{
@@ -4477,6 +4480,7 @@ header{
 }
 
 .hamburger_time{
+    margin-bottom: 20px;
     font-size: 1.2rem;
     letter-spacing: 1px;
     color: #ccc;
@@ -4484,7 +4488,7 @@ header{
 }
 
 .hamburger_address{
-    margin-top: 12px;
+    margin-top: 30px;
     margin-bottom: 18px;
     font-size: 1.2rem;
     letter-spacing: 1px;
@@ -4492,7 +4496,7 @@ header{
 }
 
 .hamburger_map{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height:1.5;
     letter-spacing: 1px;
     color: #ccc;
@@ -4503,28 +4507,30 @@ header{
 }
 
 .hamburger_bottom{
+    padding-top: 100px;
+    padding-left: 80px;
     order: 3;
 }
 
-.sns{
+.hamburger_sns{
     margin-top: 50px;
 }
 
-.sns_box{
+.hamburger_sns_box{
     display: flex;
     padding-left: 0;
 }
 
-.sns_logo{
+.hamburger_sns_logo{
     margin-right: 20px;
     list-style:none;
 }
 
 /* ホバー */
-.sns_link {
+.hamburger_sns_link {
 	position: relative;
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 	margin: 0 auto;
 	display: block;
 	overflow: hidden;
@@ -4532,7 +4538,7 @@ header{
     object-fit: cover;
 
 }
-.sns_link img {
+.hamburger_sns_link img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -4544,44 +4550,56 @@ header{
 	transition: .1s ease-in-out;
 }
 
-.sns_link:hover img:nth-of-type(2) {
+.hamburger_sns_link:hover img:nth-of-type(2) {
 	opacity: 0;
 }
 
 
-.language{
+
+.hamburger_language{
+    display: flex;
     order: 4;
     margin-top: 70px;
     margin-bottom: 50px;
 }
-.language_box{
+
+.hamburger_languageTitle{
+writing-mode: vertical-rl; /* 縦書き (右から左) */
+font-size: 1.2em;
+}
+.hamburger_languageBox{
+padding-left: 50px;
+margin: 0;
+}
+.hamburger_language_box{
+    margin: 0;
     padding-left: 0;
 }
 
 
-.language_list{
+.hamburger_language_list{
     list-style:none;
     margin-left: 0;
     margin-bottom: 14px;
 
 }
 
-.language_text{
+.hamburger_language_text{
     text-decoration: none;
     font-size: 1.2rem;
     letter-spacing: 1px;
     color: #ccc;
 }
 
-.language_text:hover{
+.hamburger_language_text:hover{
     color: #fff;
 }
 
 
-.copyright{
-    margin-top: 50px;
+.hamburger_copyright{
+    margin-top: 30px;
 }
-.copyright_text{
+.hamburger_copyright_text{
     text-decoration: none;
     font-size: 1rem;
     color: #ccc;
@@ -4817,7 +4835,7 @@ header{
 
 .header_chatbot{
     position: relative;
-    z-index: 9999;   /* 他の要素より前面に表示 */
+    z-index: 999;   /* 他の要素より前面に表示 */
 }
 
 .header_chatbotIcon {
@@ -5893,7 +5911,7 @@ header {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    z-index: 100;
+    z-index: 1000;
 }
 
 
