@@ -603,7 +603,7 @@ header{
 
 .header_chatbot{
     position: relative;
-    z-index: 9999;   /* 他の要素より前面に表示 */
+    z-index: 999;   /* 他の要素より前面に表示 */
 }
 
 .header_chatbotIcon {
@@ -2282,7 +2282,7 @@ header{
 
 .header_chatbot{
     position: relative;
-    z-index: 9999;   /* 他の要素より前面に表示 */
+    z-index: 999;   /* 他の要素より前面に表示 */
 }
 
 .header_chatbotIcon {
@@ -3686,7 +3686,7 @@ header {
 
 .header_chatbot {
     position: relative;
-    z-index: 9999;   /* 他の要素より前面に表示 */
+    z-index: 999;   /* 他の要素より前面に表示 */
 }
 
 .header_chatbotIcon {
@@ -7074,7 +7074,7 @@ margin: 0;
 
 .header_chatbot{
     position: relative;
-    z-index: 9999;   /* 他の要素より前面に表示 */
+    z-index: 999;   /* 他の要素より前面に表示 */
 }
 
 .header_chatbotIcon {
