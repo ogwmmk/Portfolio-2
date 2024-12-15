@@ -105,7 +105,7 @@ header{
 /* ハンバーガーメニュー内 */
 
 .hamburger-wrap{
-    /* display: none; */
+    display: none;
     position: fixed; /* 固定表示に変更 */
     top: 0; /* ヘッダーの下に表示 */
     left: 0;
@@ -1778,7 +1778,7 @@ header{
 /* ハンバーガーメニュー内 */
 
 .hamburger-wrap{
-    /* display: none; */
+    display: none;
     position: fixed; /* 固定表示に変更 */
     top: 0; /* ヘッダーの下に表示 */
     left: 0;
@@ -2429,6 +2429,7 @@ main {
     width: 100%;
     padding-top: 30px;
     padding-left: 50px;
+    padding-right: 30px;
 }
 
 .facility_title {
@@ -2579,6 +2580,7 @@ main {
 .meal_content {
     padding-top: 30px;
     padding-left: 50px;
+    padding-right: 30px;
     order: 2;
 }
 
@@ -4896,7 +4898,7 @@ header{
 
 
 .hamburger-wrap{
-    /* display: none; */
+    display: none;
     position: fixed; /* 固定表示に変更 */
     top: 0; /* ヘッダーの下に表示 */
     left: 0;
@@ -6528,7 +6530,7 @@ header {
 
 
 .hamburger-wrap{
-    /* display: none; */
+    display: none;
     position: fixed; /* 固定表示に変更 */
     top: 0; /* ヘッダーの下に表示 */
     left: 0;
