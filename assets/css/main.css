@@ -2330,6 +2330,7 @@ main {
     width: 100%;
     padding-top: 30px;
     padding-left: 50px;
+    padding-right: 30px;
 }
 
 .about_title {
@@ -2492,6 +2493,7 @@ main {
     width: 100%;
     padding-top: 30px;
     padding-left: 50px;
+    padding-right: 30px;
 }
 
 
@@ -2667,7 +2669,8 @@ main {
 
 .room_content {
     padding-top: 30px;
-    padding-left: 50px
+    padding-left: 50px;
+    padding-right: 30px;
 }
 
 .room_br {
