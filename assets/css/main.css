@@ -65,6 +65,10 @@ header{
 
 .hamburger-menu {
     display: none; /* 初期状態でハンバーガーメニューを非表示 */
+    position: fixed; /* スクロールしても画面に固定 */
+    top: 20px; /* 上部からの距離を調整 */
+    left: 20px; /* 左端からの距離を調整 */
+    z-index: 10000; /* メニューラップより上に表示 */
 }
 .hamburger-menu span {
     display: block;
@@ -130,13 +134,13 @@ header{
 .hamburger-menu.active span:nth-child(1) {
     transform: rotate(45deg);
     position: relative;
-    top: 6px;
+    top: 4px;
 }
 
 .hamburger-menu.active span:nth-child(2) {
     transform: rotate(-45deg);
     position: relative;
-    top: -6px;
+    top: -4px;
 }
 
 .hamburger_top{
@@ -1741,6 +1745,10 @@ header{
 
 .hamburger-menu {
     display: none; /* 初期状態でハンバーガーメニューを非表示 */
+    position: fixed; /* スクロールしても画面に固定 */
+    top: 20px; /* 上部からの距離を調整 */
+    left: 20px; /* 左端からの距離を調整 */
+    z-index: 10000; /* メニューラップより上に表示 */
 }
 .hamburger-menu span {
     display: block;
@@ -1803,13 +1811,13 @@ header{
 .hamburger-menu.active span:nth-child(1) {
     transform: rotate(45deg);
     position: relative;
-    top: 6px;
+    top: 4px;
 }
 
 .hamburger-menu.active span:nth-child(2) {
     transform: rotate(-45deg);
     position: relative;
-    top: -6px;
+    top: -4px;
 }
 
 .hamburger_top{
@@ -3425,6 +3433,10 @@ header {
 
 .hamburger-menu {
     display: none; /* 初期状態でハンバーガーメニューを非表示 */
+    position: fixed; /* スクロールしても画面に固定 */
+    top: 20px; /* 上部からの距離を調整 */
+    left: 20px; /* 左端からの距離を調整 */
+    z-index: 10000; /* メニューラップより上に表示 */
 }
 .hamburger-menu span {
     display: block;
@@ -4849,18 +4861,23 @@ header{
     z-index: 1000;
 }
 
+.header_logo{
+    transition: all 0.3s ease;
+}
+
 .header_nav{
     display: flex;
     transition: background-color 0.3s;
 }
 
-.header_logo{
-    transition: all 0.3s ease;
+.hamburger-menu {
+    display: none; /*初期状態でハンバーガーメニューを非表示*/
+    position: fixed; /* スクロールしても画面に固定 */
+    top: 20px; /* 上部からの距離を調整 */
+    left: 20px; /* 左端からの距離を調整 */
+    z-index: 10000; /* メニューラップより上に表示 */
 }
 
-.hamburger-menu {
-    display: none; /* 初期状態でハンバーガーメニューを非表示 */
-}
 .hamburger-menu span {
     display: block;
     width: 40px;
@@ -4870,6 +4887,7 @@ header{
     border-radius: 1px; /* 線の端を丸くする */
     transition: all 0.3s ease; /* アニメーション用のトランジション */
 }
+
 .hamburger-menu.active span {
     background-color: #fff;
 }
@@ -4902,7 +4920,8 @@ header{
 
 .hamburger-wrap{
     display: none;
-    position: fixed; /* 固定表示に変更 */
+    position: fixed; /*固定表示に変更 */
+    /* position: absolute; */
     top: 0; /* ヘッダーの下に表示 */
     left: 0;
     width: 100%;
@@ -4912,6 +4931,7 @@ header{
     background-image: url("../../assets/img/background-bk.jpg");
     opacity: 0.9;
     color: #ddd;
+    z-index: 1000; /* .hamburger-menu より低い値にする */
 }
 
 .hamburger-wrap.show {
@@ -4927,13 +4947,13 @@ header{
 .hamburger-menu.active span:nth-child(1) {
     transform: rotate(45deg);
     position: relative;
-    top: 6px;
+    top: 4px;
 }
 
 .hamburger-menu.active span:nth-child(2) {
     transform: rotate(-45deg);
     position: relative;
-    top: -6px;
+    top: -4px;
 }
 
 
@@ -6495,6 +6515,10 @@ header {
 
 .hamburger-menu {
     display: none; /* 初期状態でハンバーガーメニューを非表示 */
+    position: fixed; /* スクロールしても画面に固定 */
+    top: 20px; /* 上部からの距離を調整 */
+    left: 20px; /* 左端からの距離を調整 */
+    z-index: 10000; /* メニューラップより上に表示 */
 }
 .hamburger-menu span {
     display: block;
@@ -6559,13 +6583,13 @@ header {
 .hamburger-menu.active span:nth-child(1) {
     transform: rotate(45deg);
     position: relative;
-    top: 6px;
+    top: 4px;
 }
 
 .hamburger-menu.active span:nth-child(2) {
     transform: rotate(-45deg);
     position: relative;
-    top: -6px;
+    top: -4px;
 }
 
 
