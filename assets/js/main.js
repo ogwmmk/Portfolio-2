@@ -144,6 +144,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // ハンバーガーメニューとメニューを取得
 const hamburger = document.querySelector('.hamburger-menu');
 const menu = document.getElementById('menu');
+const body = document.body; // body 要素を取得
+
 
 // ハンバーガーメニューをクリックしたときのイベント
 hamburger.addEventListener('click', () => {
@@ -152,11 +154,11 @@ hamburger.addEventListener('click', () => {
 
   // ハンバーガーアイコンのアニメーション切り替え
   hamburger.classList.toggle('active');
-});
 
-// メニュー自体をクリックしたときに閉じる
-menu.addEventListener('click', () => {
-  menu.classList.remove('show');
-  hamburger.classList.remove('active');
+  // スクロールを無効にする/有効にする
+  if (menu.classList.contains('show')) {
+    body.style.overflow = 'hidden'; // メニューが開いた時にスクロール無効化
+  } else {
+    body.style.overflow = ''; // メニューが閉じた時にスクロール有効化
+  }
 });
-
